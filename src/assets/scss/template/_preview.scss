@@ -180,7 +180,7 @@
     }
 
     .splash-service-main {
-        margin-top: 80px;
+        margin-top: 0px;
         border-radius: 10px;
 
         .bg-shape {
@@ -213,6 +213,14 @@
 
 
     }
+    /* ===== Force 5 columns in one row (Desktop) ===== */
+@media (min-width: 1200px) {
+    .row.five-cols > [class*="col-"] {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
 
     .shape-image {
         position: absolute;

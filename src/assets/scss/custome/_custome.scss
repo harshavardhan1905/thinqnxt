@@ -134,8 +134,12 @@
 .bootstrap-select .dropdown-toggle {
     display: none;
 }
+select{
+    cursor: pointer;
+}
 .course-select-visible{
     color: rgb(60, 45, 45) !important;
+    cursor: pointer;
 }
 
 /* ============================

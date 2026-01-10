@@ -1817,14 +1817,14 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                     <input type="tel" name="phone" placeholder="Mobile Number" required>
                 </div>
 
-                <select name="course" required>
-                    <option value="" disabled selected>Select Course</option>
-                    <option>Full Stack Data Science</option>
-                    <option>Data Science</option>
-                    <option>Data Engineering</option>
-                    <option>Data Analyst</option>
-                    <option>AI / ML</option>
-                    <option>Gen AI</option>
+                <select name="course" required class='select-course'>
+                    <option value="" disabled >Select Course</option>
+                    <option selected class="course-select-visible">Full Stack Data Science</option>
+                    <option class="course-select-visible">Data Science</option>
+                    <option disabled>Data Engineering</option>
+                    <option disabled>Data Analyst</option>
+                    <option disabled>AI / ML</option>
+                    <option disabled>Gen AI</option>
                 </select>
 
                   <label class="checkbox">
@@ -1886,58 +1886,63 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                     <div class="row">
                         <div class="splash-service-main position-relative">
                             <div class="service-wrapper service-white">
-                                <div class="row g-0">
-                                    <div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-12 service__style--column">
+                                <div class="row g-0 five-cols">
+                                    <div class="col-lg-6 col-xl-2 col-md-6 col-sm-6 col-12 service__style--column">
                                         <div class="service service__style--1">
                                             <div class="icon">
                                                 <img src="assets/images/icons/icons-01.png" alt="Icon Images">
                                             </div>
                                             <div class="content">
-                                                <h4 class="title">Fast Performance</h4>
-                                                <p>Optimized for a smaller build size, faster dev compilation and dozens
-                                                    of
-                                                    other improvements.</p>
+                                                <h4 class="title">DATA SCIENCE</h4>
+                                                <p>Statistics, Python & SQL, Practical data problem solving, Learn from industry professionals, Designed for career switchers.</p>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-12 service__style--column">
+                                    <div class="col-lg-6 col-xl-2 col-md-6 col-sm-6 col-12 service__style--column">
                                         <div class="service service__style--1">
                                             <div class="icon">
                                                 <img src="assets/images/icons/icons-02.png" alt="Icon Images">
                                             </div>
                                             <div class="content">
-                                                <h4 class="title">Perfect Responsive</h4>
-                                                <p>Our template is full perfect for all device. You can visit our
-                                                    template all
-                                                    device easily.</p>
+                                                <h4 class="title">DATA ENGINEERING</h4>
+                                                <p>Spark, Hadoop & Kafka, Build scalable data systems, Work with AWS & databases, Prepare for Data Engineer roles.</p>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-12 service__style--column">
+                                    <div class="col-lg-6 col-xl-2 col-md-6 col-sm-6 col-12 service__style--column">
                                         <div class="service service__style--1">
                                             <div class="icon">
                                                 <img src="assets/images/icons/icons-03.png" alt="Icon Images">
                                             </div>
                                             <div class="content">
-                                                <h4 class="title">Fast &amp; Friendly Support</h4>
-                                                <p>We are provide 24 hours support for all clients.You can purchase
-                                                    without
-                                                    hesitation.</p>
+                                                <h4 class="title">DATA ANALYST</h4>
+                                                <p>Excel, SQL & BI tools, Data-driven decision making, Real business scenarios, Analyst-focused preparation.</p>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6 col-xl-3 col-md-6 col-sm-6 col-12 service__style--column">
+                                    <div class="col-lg-6 col-xl-2 col-md-6 col-sm-6 col-12 service__style--column">
                                         <div class="service service__style--1">
                                             <div class="icon">
                                                 <img src="assets/images/icons/icons-04.png" alt="Icon Images">
                                             </div>
                                             <div class="content">
-                                                <h4 class="title">Easy to Use</h4>
-                                                <p>Create your own custom template or section by copying, pasting, and
-                                                    assembling.
+                                                <h4 class="title">AI / ML</h4>
+                                                <p>Core machine learning concepts, Neural networks & AI models, Production-ready ML systems, AI & ML Engineer careers.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-2 col-md-6 col-sm-6 col-12 service__style--column">
+                                        <div class="service service__style--1">
+                                            <div class="icon">
+                                                <img src="assets/images/icons/icons-04.png" alt="Icon Images">
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title">GEN AI</h4>
+                                                <p>LLMs & prompt engineering, Chatbots & AI applications, Automation & content generation, Next-gen AI career paths.
                                                 </p>
                                             </div>
                                         </div>

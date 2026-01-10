@@ -35932,7 +35932,7 @@ Course Sidebar
   opacity: 0.3;
 }
 .rbt-splash-slider .splash-service-main {
-  margin-top: 80px;
+  margin-top: 0px;
   border-radius: 10px;
 }
 .rbt-splash-slider .splash-service-main .bg-shape {
@@ -35959,6 +35959,18 @@ Course Sidebar
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rbt-splash-slider .service-wrapper.service-white {
     margin-top: 64px;
+  }
+}
+.rbt-splash-slider {
+  /* ===== Force 5 columns in one row (Desktop) ===== */
+}
+@media (min-width: 1200px) {
+  .rbt-splash-slider .row.five-cols > [class*=col-] {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    max-width: 20%;
   }
 }
 .rbt-splash-slider .shape-image {
@@ -37680,7 +37692,7 @@ Course Sidebar
   opacity: 0.3;
 }
 .rbt-splash-slider .splash-service-main {
-  margin-top: 80px;
+  margin-top: 0px;
   border-radius: 10px;
 }
 .rbt-splash-slider .splash-service-main .bg-shape {
@@ -37707,6 +37719,18 @@ Course Sidebar
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .rbt-splash-slider .service-wrapper.service-white {
     margin-top: 64px;
+  }
+}
+.rbt-splash-slider {
+  /* ===== Force 5 columns in one row (Desktop) ===== */
+}
+@media (min-width: 1200px) {
+  .rbt-splash-slider .row.five-cols > [class*=col-] {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    max-width: 20%;
   }
 }
 .rbt-splash-slider .shape-image {
@@ -41765,8 +41789,13 @@ Course Sidebar
   display: none;
 }
 
+select {
+  cursor: pointer;
+}
+
 .course-select-visible {
   color: rgb(60, 45, 45) !important;
+  cursor: pointer;
 }
 
 /* ============================

@@ -31,14 +31,14 @@
                     <input type="tel" name="phone" placeholder="Mobile Number" required>
                 </div>
 
-                <select name="course" required>
-                    <option value="" disabled selected>Select Course</option>
-                    <option>Full Stack Data Science</option>
-                    <option>Data Science</option>
-                    <option>Data Engineering</option>
-                    <option>Data Analyst</option>
-                    <option>AI / ML</option>
-                    <option>Gen AI</option>
+                <select name="course" required class='select-course'>
+                    <option value="" disabled >Select Course</option>
+                    <option selected class="course-select-visible">Full Stack Data Science</option>
+                    <option class="course-select-visible">Data Science</option>
+                    <option disabled>Data Engineering</option>
+                    <option disabled>Data Analyst</option>
+                    <option disabled>AI / ML</option>
+                    <option disabled>Gen AI</option>
                 </select>
 
                   <label class="checkbox">
