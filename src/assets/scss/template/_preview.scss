@@ -214,12 +214,33 @@
 
     }
     /* ===== Force 5 columns in one row (Desktop) ===== */
-@media (min-width: 1200px) {
-    .row.five-cols > [class*="col-"] {
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
-}
+        @media (min-width: 1200px) {
+            .row.five-cols > [class*="col-"] {
+                flex: 0 0 20%;
+                max-width: 20%;
+            }
+        }
+
+        .section-title {
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #1f2937;              /* dark slate */
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        /* subtle accent underline */
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 4px;
+            margin-top: 10px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #3b82f6, #9333ea);
+        }
+
 
 
     .shape-image {

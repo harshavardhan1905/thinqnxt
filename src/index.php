@@ -256,7 +256,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                 </div>
 
                 <div class="col-lg-12">
-                                <h3 class="" style="margin-bottom: 0px !important;">FULL STACK DATA SCIENCE</h3>
+                                <h3 class="section-title" style="margin-bottom: 10px !important; ">FULL STACK DATA SCIENCE</h3>
 
                     <div class="row">
                         <div class="splash-service-main position-relative">
@@ -301,7 +301,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                                     <div class="col-lg-6 col-xl-2 col-md-6 col-sm-6 col-12 service__style--column">
                                         <div class="service service__style--1">
                                             <div class="icon">
-                                                <img src="assets/images/icons/icons-04.png" alt="Icon Images">
+                                                <img src="assets/images/icons/icon-aiml.png" alt="Icon Images">
                                             </div>
                                             <div class="content">
                                                 <h4 class="title">AI / ML</h4>
@@ -351,8 +351,8 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                 <div class="row mb--60">
                     <div class="col-lg-12">
                         <div class="section-title text-center">
-                            <span class="subtitle bg-secondary-opacity">All in One Template</span>
-                            <h2 class="title">Why Choose Histudy.</h2>
+                            <span class="subtitle bg-secondary-opacity">All in One Course</span>
+                            <h2 class="title">Why Choose ThinqNxt.</h2>
                         </div>
                     </div>
                 </div>
@@ -363,18 +363,18 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                         <div class="top-features-box h-100 text-center bg-gradient-15">
                             <div class="inner">
                                 <div class="content">
-                                    <span class="pre-title text-uppercase">For Online Courses</span>
-                                    <h4 class="title">Create Your Online Courses Website.</h4>
+                                    <span class="pre-title text-uppercase">Industry-Driven Curriculum</span>
+                                    <h4 class="title">Built for real-world impact, not just theory.</h4>
                                 </div>
                                 <div class="thumbnail">
                                     <img src="assets/images/splash/topfeature/01.png" alt="Image">
                                 </div>
                                 <div class="rbt-badge-group">
-                                    <span class="rbt-badge">Individual instructor</span>
-                                    <span class="rbt-badge">Multiple Instructors</span>
-                                    <span class="rbt-badge">Marketplace</span>
-                                    <span class="rbt-badge">Single Course</span>
-                                    <span class="rbt-badge">Like Udemy</span>
+                                    <span class="rbt-badge">Designed with real industry use-cases</span>
+                                    <span class="rbt-badge">Aligned with current tech & hiring trends</span>
+                                    <span class="rbt-badge">Continuously updated learning paths</span>
+                                    <span class="rbt-badge">Skills that match real job roles</span>
+                                    <span class="rbt-badge">“Learn what the industry actually uses.”</span>
                                     <span class="rbt-badge">& More...</span>
                                 </div>
                             </div>
@@ -391,19 +391,19 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                         <div class="top-features-box h-100 text-center bg-gradient-16">
                             <div class="inner">
                                 <div class="content">
-                                    <span class="pre-title text-uppercase">FOR University or School Education</span>
-                                    <h4 class="title">Create Your Education Website.</h4>
+                                    <span class="pre-title text-uppercase">Hands-On, Project-First Learning</span>
+                                    <h4 class="title">Learning by doing—from day one.</h4>
                                 </div>
 
                                 <div class="thumbnail">
                                     <img src="assets/images/splash/topfeature/02.png" alt="Image">
                                 </div>
                                 <div class="rbt-badge-group">
-                                    <span class="rbt-badge">Higher education</span>
-                                    <span class="rbt-badge">Universitys</span>
-                                    <span class="rbt-badge">Kindergarden</span>
-                                    <span class="rbt-badge">Pre School</span>
-                                    <span class="rbt-badge">High School</span>
+                                    <span class="rbt-badge">Live, guided projects</span>
+                                    <span class="rbt-badge">Real-world problem solving</span>
+                                    <span class="rbt-badge">Practical assignments & labs</span>
+                                    <span class="rbt-badge">Portfolio-ready project outcomes</span>
+                                    <span class="rbt-badge">“You don’t just learn it—you build it.”</span>
                                     <span class="rbt-badge">& More...</span>
                                 </div>
                             </div>
@@ -420,8 +420,8 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                         <div class="top-features-box h-100 text-center bg-gradient-17">
                             <div class="inner">
                                 <div class="content">
-                                    <span class="pre-title text-uppercase">FOR Profetional Coching </span>
-                                    <h4 class="title">Create Your Coaching and Training Website.</h4>
+                                    <span class="pre-title text-uppercase">🎓 Expert Mentors </span>
+                                    <h4 class="title">Learn from professionals who’ve done the work.</h4>
                                 </div>
 
                                 <div class="thumbnail">
@@ -429,10 +429,39 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                                 </div>
 
                                 <div class="rbt-badge-group">
-                                    <span class="rbt-badge">Language Academy</span>
-                                    <span class="rbt-badge">Gym Coaching</span>
-                                    <span class="rbt-badge">Career Trenning </span>
-                                    <span class="rbt-badge">Life Coaching</span>
+                                    <span class="rbt-badge">Mentors with real industry experience</span>
+                                    <span class="rbt-badge">Clear concept explanation</span>
+                                    <span class="rbt-badge">Career-oriented guidance</span>
+                                    <span class="rbt-badge">Regular doubt-clearing sessions</span>
+                                    <span class="rbt-badge">“Learn from people who’ve been there.”</span>
+                                    <span class="rbt-badge">& More...</span>
+                                </div>
+
+                            </div>
+                            <div class="shape-image">
+                                <img src="assets/images/splash/icons/sun-shadow-right-3.png" alt="Shape Images">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12" data-sal-delay="250" data-sal="slide-up"
+                        data-sal-duration="800">
+                        <div class="top-features-box h-100 text-center bg-gradient-17">
+                            <div class="inner">
+                                <div class="content">
+                                    <span class="pre-title text-uppercase">Career Support That Works</span>
+                                    <h4 class="title">Support beyond learning—focused on outcomes.</h4>
+                                </div>
+
+                                <div class="thumbnail">
+                                    <img src="assets/images/icons/card-icon-12.png" alt="Image">
+                                </div>
+
+                                <div class="rbt-badge-group">
+                                    <span class="rbt-badge">Resume & LinkedIn optimization</span>
+                                    <span class="rbt-badge">Interview preparation & mock sessions</span>
+                                    <span class="rbt-badge">Career guidance & referrals</span>
+                                    <span class="rbt-badge">Long-term career mentoring</span>
+                                    <span class="rbt-badge">“Your success is the final goal.”</span>
                                     <span class="rbt-badge">& More...</span>
                                 </div>
 

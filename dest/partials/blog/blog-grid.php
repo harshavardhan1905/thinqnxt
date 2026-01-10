@@ -1,0 +1,66 @@
+<!-- Start Card Area -->
+<div class="row g-5">
+    <!-- Start Single Card  -->
+    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30" data-sal-delay="150" data-sal="slide-up"
+        data-sal-duration="800">
+        <div class="rbt-card variation-02 rbt-hover card-minimal">
+            <div class="rbt-card-body">
+                <ul class="meta-list justify-content-start mb--30">
+                    <li class="list-item">
+                        <i class="feather-clock"></i>
+                        <span>20 March 2025</span>
+                    </li>
+                </ul>
+                <h4 class="rbt-card-title"><a href="blog-details.php">Learn From These You Learn Education.</a></h4>
+                <div class="rbt-card-bottom mt--40">
+                    <a class="transparent-button" href="blog-details.php">Learn
+                        More<i><svg width="17" height="12" xmlns="http://www.w3.org/2000/svg"><g stroke="#27374D" fill="none" fill-rule="evenodd"><path d="M10.614 0l5.629 5.629-5.63 5.629"/><path stroke-linecap="square" d="M.663 5.572h14.594"/></g></svg></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Single Card  -->
+
+    <!-- Start Single Card  -->
+    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30" data-sal-delay="150" data-sal="slide-up"
+        data-sal-duration="800">
+        <div class="rbt-card variation-02 rbt-hover card-minimal">
+            <div class="rbt-card-body">
+                <ul class="meta-list justify-content-start mb--30">
+                    <li class="list-item">
+                        <i class="feather-clock"></i>
+                        <span>30 May 2025</span>
+                    </li>
+                </ul>
+                <h4 class="rbt-card-title"><a href="blog-details.php">Think You're An Expert In Education?</a></h4>
+                <div class="rbt-card-bottom mt--40">
+                    <a class="transparent-button" href="blog-details.php">Learn
+                        More<i><svg width="17" height="12" xmlns="http://www.w3.org/2000/svg"><g stroke="#27374D" fill="none" fill-rule="evenodd"><path d="M10.614 0l5.629 5.629-5.63 5.629"/><path stroke-linecap="square" d="M.663 5.572h14.594"/></g></svg></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Single Card  -->
+
+    <!-- Start Single Card  -->
+    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt--30" data-sal-delay="150" data-sal="slide-up"
+        data-sal-duration="800">
+        <div class="rbt-card variation-02 rbt-hover card-minimal">
+            <div class="rbt-card-body">
+                <ul class="meta-list justify-content-start mb--30">
+                    <li class="list-item">
+                        <i class="feather-clock"></i>
+                        <span>15 July 2025</span>
+                    </li>
+                </ul>
+                <h4 class="rbt-card-title"><a href="blog-details.php">Seven Easy Rules Of Education.</a></h4>
+                <div class="rbt-card-bottom mt--40">
+                    <a class="transparent-button" href="blog-details.php">Learn
+                        More<i><svg width="17" height="12" xmlns="http://www.w3.org/2000/svg"><g stroke="#27374D" fill="none" fill-rule="evenodd"><path d="M10.614 0l5.629 5.629-5.63 5.629"/><path stroke-linecap="square" d="M.663 5.572h14.594"/></g></svg></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Single Card  -->
+</div>
+<!-- End Card Area -->

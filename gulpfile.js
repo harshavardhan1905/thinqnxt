@@ -17,7 +17,7 @@ const browserSync = require("browser-sync").create();
 ========================= */
 
 const paths = {
-  php: "src/*.php",
+  php: "src/**/*.php",
   partials: "src/partials/**/*.php",
   api: "src/api/**/*.php",
   config: "src/config/**/*",
@@ -201,8 +201,11 @@ function serve() {
     open: true,
     notify: false,
   });
+    gulp.watch([paths.php, paths.partials], gulp.series(php, () => {
+      browserSync.reload();
+    }));
+  gulp.watch("dest/index.php").on("change", browserSync.reload);
 
-  gulp.watch([paths.php, paths.partials], gulp.series(php, browserSync.reload));
   gulp.watch(paths.api, gulp.series(api, browserSync.reload));
   gulp.watch(paths.config, gulp.series(configFiles, browserSync.reload));
 
