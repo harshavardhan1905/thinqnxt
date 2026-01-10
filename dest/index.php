@@ -1836,9 +1836,10 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                     </span>
                 </label>
 
-            <p id="responseMsg"></p>
-                <button type="submit" class="book-btn">
-                    Book your Demo Session
+            
+                <button type="submit" class="book-btn" id="submitBtn">
+                    <p id="responseMsg" class="btn-message"></p>
+                    <p id="btnText">Book your Demo Session</p>
                 </button>
 
             </form>
