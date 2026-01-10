@@ -1985,7 +1985,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                 </div>
                 <div class="row g-5">
                     <!-- Start Top Feature  -->
-                    <div class="col-lg-4 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up"
+                    <div class="col-lg-3 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up"
                         data-sal-duration="800">
                         <div class="top-features-box h-100 text-center bg-gradient-15">
                             <div class="inner">
@@ -2013,7 +2013,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                     <!-- End Top Feature  -->
 
                     <!-- Start Top Feature  -->
-                    <div class="col-lg-4 col-md-6 col-12" data-sal-delay="200" data-sal="slide-up"
+                    <div class="col-lg-3 col-md-6 col-12" data-sal-delay="200" data-sal="slide-up"
                         data-sal-duration="800">
                         <div class="top-features-box h-100 text-center bg-gradient-16">
                             <div class="inner">
@@ -2042,13 +2042,13 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                     <!-- End Top Feature  -->
 
                     <!-- Start Top Feature  -->
-                    <div class="col-lg-4 col-md-6 col-12" data-sal-delay="250" data-sal="slide-up"
+                    <div class="col-lg-3 col-md-6 col-12" data-sal-delay="250" data-sal="slide-up"
                         data-sal-duration="800">
                         <div class="top-features-box h-100 text-center bg-gradient-17">
                             <div class="inner">
                                 <div class="content">
-                                    <span class="pre-title text-uppercase">🎓 Expert Mentors </span>
-                                    <h4 class="title">Learn from professionals who’ve done the work.</h4>
+                                    <span class="pre-title text-uppercase">Expert Mentors </span>
+                                    <h4 class="title">Learn from professionals.</h4>
                                 </div>
 
                                 <div class="thumbnail">
@@ -2070,12 +2070,12 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-12" data-sal-delay="250" data-sal="slide-up"
+                    <div class="col-lg-3 col-md-6 col-12" data-sal-delay="250" data-sal="slide-up"
                         data-sal-duration="800">
                         <div class="top-features-box h-100 text-center bg-gradient-17">
                             <div class="inner">
                                 <div class="content">
-                                    <span class="pre-title text-uppercase">Career Support That Works</span>
+                                    <span class="pre-title text-uppercase">Career Support</span>
                                     <h4 class="title">Support beyond learning—focused on outcomes.</h4>
                                 </div>
 
@@ -2084,11 +2084,11 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                                 </div>
 
                                 <div class="rbt-badge-group">
-                                    <span class="rbt-badge">Resume & LinkedIn optimization</span>
-                                    <span class="rbt-badge">Interview preparation & mock sessions</span>
-                                    <span class="rbt-badge">Career guidance & referrals</span>
-                                    <span class="rbt-badge">Long-term career mentoring</span>
-                                    <span class="rbt-badge">“Your success is the final goal.”</span>
+                                    <span class="rbt-badge">Resume & LinkedIn optimization</span> <br>
+                                    <span class="rbt-badge">Interview preparation & mock sessions</span> <br>
+                                    <span class="rbt-badge">Career guidance & referrals</span> <br>
+                                    <span class="rbt-badge">Long-term career mentoring</span> <br>
+                                    <span class="rbt-badge">“Success is the final goal.”</span> <br>
                                     <span class="rbt-badge">& More...</span>
                                 </div>
 

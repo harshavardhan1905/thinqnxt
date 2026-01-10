@@ -1,9 +1,10 @@
 /**
- * HISTUDY – FINAL GULP CONFIG (PHP + API + ASSETS + LIVE RELOAD)
+ * HISTUDY – STABLE GULP CONFIG
+ * PHP + API + ASSETS + LIVE RELOAD (NO FREEZE)
  */
 
 const gulp = require("gulp");
-const clean = require("gulp-clean");
+const del = require("del");
 const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("gulp-autoprefixer");
 const sourcemaps = require("gulp-sourcemaps");
@@ -45,18 +46,18 @@ const paths = {
 function errorHandler(title) {
   return plumber({
     errorHandler: notify.onError({
-      title: title,
+      title,
       message: "<%= error.message %>",
     }),
   });
 }
 
 /* =========================
-   CLEAN
+   CLEAN (ONLY FOR BUILD)
 ========================= */
 
 function cleanDest() {
-  return gulp.src(paths.dest, { allowEmpty: true }).pipe(clean());
+  return del([paths.dest]);
 }
 
 /* =========================
@@ -108,6 +109,10 @@ function scss() {
     .pipe(browserSync.stream());
 }
 
+/* =========================
+   CSS
+========================= */
+
 function vendorCss() {
   return gulp
     .src(paths.vendorCss)
@@ -130,28 +135,28 @@ function mainJs() {
   return gulp
     .src(paths.mainJs)
     .pipe(gulp.dest("dest/assets/js"))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 function vendorJs() {
   return gulp
     .src(paths.vendorJs)
     .pipe(gulp.dest("dest/assets/js/vendor"))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 function pluginJs() {
   return gulp
     .src(paths.pluginJs)
     .pipe(gulp.dest("dest/assets/js/plugins"))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 function apiJs() {
   return gulp
     .src(paths.apiJs)
     .pipe(gulp.dest("dest/assets/js/api"))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 /* =========================
@@ -171,28 +176,30 @@ function videos() {
 }
 
 /* =========================
-   BUILD
+   BUILD (PRODUCTION)
 ========================= */
 
 const build = gulp.series(
   cleanDest,
-  php,
-  api,
-  configFiles,
-  scss,
-  vendorCss,
-  pluginCss,
-  mainJs,
-  vendorJs,
-  pluginJs,
-  apiJs,
-  images,
-  fonts,
-  videos
+  gulp.parallel(
+    php,
+    api,
+    configFiles,
+    scss,
+    vendorCss,
+    pluginCss,
+    mainJs,
+    vendorJs,
+    pluginJs,
+    apiJs,
+    images,
+    fonts,
+    videos
+  )
 );
 
 /* =========================
-   LIVE SERVER
+   LIVE SERVER (DEV)
 ========================= */
 
 function serve() {
@@ -201,10 +208,11 @@ function serve() {
     open: true,
     notify: false,
   });
-    gulp.watch([paths.php, paths.partials], gulp.series(php, () => {
-      browserSync.reload();
-    }));
-  gulp.watch("dest/index.php").on("change", browserSync.reload);
+
+  gulp.watch([paths.php, paths.partials], gulp.series(php, (done) => {
+    browserSync.reload();
+    done();
+  }));
 
   gulp.watch(paths.api, gulp.series(api, browserSync.reload));
   gulp.watch(paths.config, gulp.series(configFiles, browserSync.reload));
@@ -228,5 +236,23 @@ function serve() {
 ========================= */
 
 exports.build = build;
-exports.serve = gulp.series(build, serve);
+exports.serve = gulp.series(
+  gulp.parallel(
+    php,
+    api,
+    configFiles,
+    scss,
+    vendorCss,
+    pluginCss,
+    mainJs,
+    vendorJs,
+    pluginJs,
+    apiJs,
+    images,
+    fonts,
+    videos
+  ),
+  serve
+);
+
 exports.default = build;
