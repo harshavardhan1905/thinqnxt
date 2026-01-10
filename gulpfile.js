@@ -1,6 +1,5 @@
 /**
- * HISTUDY – FINAL GULP CONFIG (ALL FIXED)
- * PHP + Assets + Config + Live Reload
+ * HISTUDY – FINAL GULP CONFIG (PHP + API + ASSETS + LIVE RELOAD)
  */
 
 const gulp = require("gulp");
@@ -20,6 +19,7 @@ const browserSync = require("browser-sync").create();
 const paths = {
   php: "src/*.php",
   partials: "src/partials/**/*.php",
+  api: "src/api/**/*.php",
   config: "src/config/**/*",
 
   scss: "src/assets/scss/**/*.scss",
@@ -29,6 +29,7 @@ const paths = {
   mainJs: "src/assets/js/main.js",
   vendorJs: "src/assets/js/vendor/**/*.js",
   pluginJs: "src/assets/js/plugins/**/*.js",
+  apiJs: "src/assets/js/api/**/*.js",
 
   images: "src/assets/images/**/*",
   fonts: "src/assets/fonts/**/*",
@@ -59,7 +60,7 @@ function cleanDest() {
 }
 
 /* =========================
-   PHP + PARTIALS
+   PHP (PAGES + PARTIALS)
 ========================= */
 
 function php() {
@@ -71,15 +72,28 @@ function php() {
 }
 
 /* =========================
-   CONFIG FILES (FIXED)
+   API (PHP)
 ========================= */
 
-function configFiles() {
-  return gulp.src(paths.config).pipe(gulp.dest("dest/config"));
+function api() {
+  return gulp
+    .src(paths.api)
+    .pipe(errorHandler("API Error"))
+    .pipe(gulp.dest("dest/api"));
 }
 
 /* =========================
-   CSS
+   CONFIG FILES
+========================= */
+
+function configFiles() {
+  return gulp
+    .src(paths.config)
+    .pipe(gulp.dest("dest/config"));
+}
+
+/* =========================
+   SCSS → CSS
 ========================= */
 
 function scss() {
@@ -87,7 +101,7 @@ function scss() {
     .src(paths.scss)
     .pipe(errorHandler("SCSS Error"))
     .pipe(sourcemaps.init())
-    .pipe(sass().on("error", sass.logError))
+    .pipe(sass())
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("../maps"))
     .pipe(gulp.dest("dest/assets/css"))
@@ -133,6 +147,13 @@ function pluginJs() {
     .pipe(browserSync.stream());
 }
 
+function apiJs() {
+  return gulp
+    .src(paths.apiJs)
+    .pipe(gulp.dest("dest/assets/js/api"))
+    .pipe(browserSync.stream());
+}
+
 /* =========================
    ASSETS
 ========================= */
@@ -156,6 +177,7 @@ function videos() {
 const build = gulp.series(
   cleanDest,
   php,
+  api,
   configFiles,
   scss,
   vendorCss,
@@ -163,6 +185,7 @@ const build = gulp.series(
   mainJs,
   vendorJs,
   pluginJs,
+  apiJs,
   images,
   fonts,
   videos
@@ -180,6 +203,7 @@ function serve() {
   });
 
   gulp.watch([paths.php, paths.partials], gulp.series(php, browserSync.reload));
+  gulp.watch(paths.api, gulp.series(api, browserSync.reload));
   gulp.watch(paths.config, gulp.series(configFiles, browserSync.reload));
 
   gulp.watch(paths.scss, scss);
@@ -189,6 +213,7 @@ function serve() {
   gulp.watch(paths.mainJs, mainJs);
   gulp.watch(paths.vendorJs, vendorJs);
   gulp.watch(paths.pluginJs, pluginJs);
+  gulp.watch(paths.apiJs, apiJs);
 
   gulp.watch(paths.images, gulp.series(images, browserSync.reload));
   gulp.watch(paths.fonts, gulp.series(fonts, browserSync.reload));

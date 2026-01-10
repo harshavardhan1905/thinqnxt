@@ -1784,21 +1784,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                     <div class="col-lg-12 col-xl-4 order-1 order-xl-2">
                         <div class="video-popup-wrapper">
                             <div class="full-width-wrapper">
-                                <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <title>Book Live Demo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
+                                <body>
 
 <div class="full-width-wrapper">
 
@@ -1820,7 +1806,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
             <h2>Book a Live Demo Session</h2>
             <p class="subtitle">Register to attend the free Live Session</p>
 
-            <form method="POST">
+            <form id="demoForm">
 
                 <input type="text" name="name" placeholder="Enter Full Name" required>
 
@@ -1841,7 +1827,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                     <option>Gen AI</option>
                 </select>
 
-                <label class="checkbox">
+                  <label class="checkbox">
                     <input type="checkbox" required>
                     <span>
                         By continuing, you agree to our
@@ -1850,6 +1836,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                     </span>
                 </label>
 
+            <p id="responseMsg"></p>
                 <button type="submit" class="book-btn">
                     Book your Demo Session
                 </button>
@@ -1860,9 +1847,10 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
     </section>
 
 </div>
+<script src="assets/js/api/demo-api.js"></script>
 
 </body>
-</html>
+
 
 
                             </div>

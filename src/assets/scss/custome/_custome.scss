@@ -86,18 +86,33 @@
     border: none;
     margin: 0;
 }
-
 .checkbox {
     display: flex;
+    align-items: flex-start;   /* 🔑 aligns checkbox with first line */
     gap: 10px;
     font-size: 13px;
-    color:red;
     margin-bottom: 20px;
+    color: #444;
+    line-height: 1.4;
+}
+
+.checkbox input {
+    margin-top: 2px;           
+    width: 16px;
+    height: 16px !important;
+    flex-shrink: 0;
+    opacity: 0.5 !important;
+}
+
+.checkbox span {
+    display: block;
+    margin-left: 20px;
 }
 
 .checkbox a {
     color: #e60023;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .demo-card .book-btn {
