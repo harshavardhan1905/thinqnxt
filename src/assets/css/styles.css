@@ -1,0 +1,116 @@
+
+/* =====================================================
+-------------------BOOK DEMO FROM CSS----------------
+===================================================== */
+.demo-section {
+    max-width: 420px;
+    margin: 40px auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.partner-bar {
+    background: linear-gradient(90deg, #e60023, #8b0000);
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    border-radius: 12px 12px 0 0;
+}
+
+.partner-bar p {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.partners {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.partners img {
+    height: 32px;
+    background: #fff;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.demo-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.demo-card h2 {
+    margin-bottom: 6px;
+    font-size: 22px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.demo-card input,
+.demo-card select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.phone-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.phone-field span {
+    padding: 0 14px;
+    background: #f3f3f3;
+    border-right: 1px solid #ddd;
+}
+
+.phone-field input {
+    border: none;
+    margin: 0;
+}
+
+.checkbox {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.checkbox a {
+    color: #e60023;
+    text-decoration: none;
+}
+
+.demo-card button {
+    width: 100%;
+    background: #e60023;
+    color: #fff;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.demo-card button:hover {
+    background: #c4001d;
+}
+
+
+
+

@@ -1,0 +1,31 @@
+<div id="my_switcher" class="my_switcher">
+    <ul>
+        <li>
+            <a href="javascript: void(0);" data-theme="light" class="setColor light">
+                <img src="assets/images/about/sun-01.svg" alt="Sun images"><span title="Light Mode"> Light</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript: void(0);" data-theme="dark" class="setColor dark">
+                <img src="assets/images/about/vector.svg" alt="Vector Images"><span title="Dark Mode"> Dark</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- Start Header Area -->
+<header class="rbt-header rbt-header-10 rbt-transparent-header">
+    <div class="rbt-sticky-placeholder"></div>
+    @@include('header/header-9.php', {
+    "logo": "logo.png",
+    "logoLight": "logo-light.png",
+    "transparent": "header-not-transparent header-sticky",
+    "gapSpaceBetween": "",
+    "container": "container",
+    "navigationEnd": "rbt-navigation-center",
+    "btnClass": "rbt-marquee-btn marquee-auto btn-border-gradient radius-round btn-sm hover-transform-none",
+    "btnText": "Enroll Now",
+    })
+</header>
+@@include('header/mobilemenu.php')
+@@include('header/offcanvas/cart.php')
