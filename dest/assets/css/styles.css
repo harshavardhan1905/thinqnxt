@@ -1468,8 +1468,13 @@ ul.rbt-dropdown-menu li .sub-menu li a, ul.rbt-dropdown-menu li a .right-icon, u
 }
 
 .bg-gradient-17 {
-  background: -webkit-linear-gradient(298.29deg, #30C4FF 0%, #7259FF 100%) !important;
-  background: linear-gradient(151.71deg, #30C4FF 0%, #7259FF 100%) !important;
+  background: -webkit-linear-gradient(298.29deg, #30C4FF 0%, #FF5959 100%) !important;
+  background: linear-gradient(151.71deg, #30C4FF 0%, #FF5959 100%) !important;
+}
+
+.bg-gradient-18 {
+  background: -webkit-linear-gradient(298.29deg, #305AFF 0%, #7259FF 100%) !important;
+  background: linear-gradient(151.71deg, #305AFF 0%, #7259FF 100%) !important;
 }
 
 .theme-mainbg-gradient {
@@ -36117,6 +36122,14 @@ Course Sidebar
 }
 .service__style--1 .icon {
   margin-bottom: 22px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .service__style--1 .icon svg {
   font-size: 60px;
@@ -36125,8 +36138,12 @@ Course Sidebar
   width: 60px;
   height: 60px;
 }
+.service__style--1 .icon h4 {
+  color: grey;
+  font-size: 20px !important;
+}
 .service__style--1 .icon img {
-  max-height: 60px;
+  max-height: 37px;
 }
 .service__style--1 .content .title {
   color: #ffffff;
@@ -36191,7 +36208,7 @@ Course Sidebar
   background: -webkit-linear-gradient(241.71deg, #F5D9D5 0%, #F5EAB4 42.92%, #99D9F5 100%);
   background: linear-gradient(208.29deg, #F5D9D5 0%, #F5EAB4 42.92%, #99D9F5 100%);
   border-radius: 10px;
-  padding: 40px;
+  padding: 10px;
   position: relative;
   z-index: 1;
   box-shadow: var(--shadow-1);
@@ -36229,9 +36246,11 @@ Course Sidebar
 .top-features-box .inner .thumbnail {
   margin-bottom: 30px;
   margin-top: 30px;
+  height: 100px;
 }
 .top-features-box .inner .thumbnail img {
   width: auto;
+  height: 100px;
 }
 .top-features-box .inner .rbt-badge-group {
   margin: -5px;
@@ -37898,6 +37917,14 @@ Course Sidebar
 }
 .service__style--1 .icon {
   margin-bottom: 22px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .service__style--1 .icon svg {
   font-size: 60px;
@@ -37906,8 +37933,12 @@ Course Sidebar
   width: 60px;
   height: 60px;
 }
+.service__style--1 .icon h4 {
+  color: grey;
+  font-size: 20px !important;
+}
 .service__style--1 .icon img {
-  max-height: 60px;
+  max-height: 37px;
 }
 .service__style--1 .content .title {
   color: #ffffff;
@@ -37972,7 +38003,7 @@ Course Sidebar
   background: -webkit-linear-gradient(241.71deg, #F5D9D5 0%, #F5EAB4 42.92%, #99D9F5 100%);
   background: linear-gradient(208.29deg, #F5D9D5 0%, #F5EAB4 42.92%, #99D9F5 100%);
   border-radius: 10px;
-  padding: 40px;
+  padding: 10px;
   position: relative;
   z-index: 1;
   box-shadow: var(--shadow-1);
@@ -38010,9 +38041,11 @@ Course Sidebar
 .top-features-box .inner .thumbnail {
   margin-bottom: 30px;
   margin-top: 30px;
+  height: 100px;
 }
 .top-features-box .inner .thumbnail img {
   width: auto;
+  height: 100px;
 }
 .top-features-box .inner .rbt-badge-group {
   margin: -5px;
@@ -41722,7 +41755,7 @@ Course Sidebar
 
 .demo-card {
   background: #fff;
-  padding: 24px;
+  padding: 10px 24px 24px 24px;
   border-radius: 0 0 16px 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
@@ -41740,8 +41773,8 @@ Course Sidebar
 .demo-card input,
 .demo-card select {
   width: 100%;
-  padding: 14px;
-  margin-bottom: 14px;
+  padding: 10px;
+  margin-bottom: 10px;
   border-radius: 10px;
   border: 1px solid #ddd;
   font-size: 14px;
@@ -41760,6 +41793,85 @@ Course Sidebar
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 14px;
+}
+
+.select-country {
+  width: 80px !important;
+  height: 50px !important;
+  font-size: 14px !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-color: #fff !important;
+  padding-right: 0px !important;
+}
+
+.code-display {
+  min-width: 58px;
+  padding: 10px 12px;
+  border: none !important;
+  border-radius: 10px 0 0 10px;
+  background: #fff;
+  font-weight: 500;
+}
+
+/* Invisible but clickable select */
+#countrySelect {
+  left: 0;
+  width: 20px;
+  height: 100%;
+  opacity: 1;
+  cursor: pointer;
+  border: none;
+  background-color: transparent !important;
+  border-right: 1px solid #d0d5dd !important;
+  border-radius: 0 0px 0px 0;
+  margin-bottom: 0px !important;
+}
+
+/* Arrow button */
+.select-arrow {
+  width: 44px;
+  margin-right: -20px !important;
+  height: 44px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-right: none !important;
+  background: transparent;
+  cursor: pointer;
+}
+
+.select-arrow svg {
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+/* Hover feedback */
+.select-arrow:hover {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.select-country button {
+  display: none !important;
+}
+
+.select-country option {
+  padding-right: 20px !important;
 }
 
 .phone-field span {
@@ -41828,7 +41940,7 @@ Course Sidebar
 }
 
 .bootstrap-select .dropdown-toggle {
-  display: none;
+  display: none !important;
 }
 
 select {
@@ -41845,8 +41957,8 @@ select {
 ============================ */
 /* Tablets & Mobile */
 @media (max-width: 991px) {
-  .ffull-width-wrapper {
-    min-height: 100vh; /* full screen height */
+  .full-width-wrapper {
+    min-height: auto; /* full screen height */
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -41871,7 +41983,7 @@ select {
     border-radius: 16px;
   }
   .demo-card h2 {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 #responseMsg {
@@ -41956,7 +42068,8 @@ select {
   }
   .demo-card input,
   .demo-card select {
-    padding: 12px;
+    padding: 10px;
+    margin-bottom: 10px !important;
     margin: auto;
     font-size: 13px;
   }
@@ -42066,5 +42179,90 @@ select {
   background: transparent;
   -webkit-filter: contrast(1.5);
           filter: contrast(1.5);
+}
+
+.rbt-splash-courses {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+.rbt-splash-courses {
+  position: relative;
+  padding: 80px 30px;
+  overflow: hidden;
+}
+
+/* Subtle blue glow */
+.rbt-splash-courses::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.rbt-splash-courses .section-title {
+  color: #facc15; /* soft yellow */
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.service-wrapper {
+  background: transparent;
+}
+
+.service__style--1 {
+  height: 100%;
+  padding: 36px 28px;
+  min-width: 260px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.service__style--1 .icon img {
+  width: 50px;
+  margin-bottom: 15px;
+  -webkit-filter: drop-shadow(0 0 6px rgba(250, 204, 21, 0.6));
+          filter: drop-shadow(0 0 6px rgba(250, 204, 21, 0.6));
+}
+
+.service__style--1 .title {
+  color: #facc15;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.service__style--1 .content p {
+  color: #000;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.service__style--column {
+  padding: 15px;
+}
+
+.service__style--1::after {
+  content: "";
+  position: absolute;
+  inset: auto 20% -10px 20%;
+  height: 2px;
+  background: -webkit-linear-gradient(left, transparent, #38bdf8, transparent);
+  background: linear-gradient(90deg, transparent, #38bdf8, transparent);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.service__style--1:hover::after {
+  opacity: 1;
 }
 /*# sourceMappingURL=../maps/styles.css.map */

@@ -7,6 +7,8 @@ require_once __DIR__ . "/config/dbcon.php";
 $db_status = $conn ? "✅ Database connection successful" : "❌ Database connection failed";
 ?>
 <body class="rbt-header-sticky">
+
+
     
     <div id="my_switcher" class="my_switcher">
         <ul>
@@ -105,7 +107,9 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
 
     <!-- Start Slider Area  -->
     <div class="rbt-splash-slider d-flex align-items-center">
-        <div class="wrapper">
+
+        <!-- ==========DEMO form============ -->
+        <div class="wrapper" style="width: 100% !important">
             <div class="container-fluid">
                 <div class="row align-items-center">
 
@@ -127,7 +131,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                             </div>
                             <h4 class="title">Develop industry-ready <br> skills for a successful  <br>career in
                                 <span class="cd-headline slide">
-                                    <span class="cd-words-wrapper" style="width: 483px;">
+                                    <span class="cd-words-wrapper title-span-wrapper" style="width: 387px !important;">
                                         <b class="is-visible theme-gradient" style="font-size: 40px">Data Science,</b>
                                         <b class="is-hidden theme-gradient" style="font-size: 40px">Data Engineering,</b>
                                         <b class="is-hidden theme-gradient" style="font-size: 40px">Data Analytics,</b>
@@ -255,81 +259,11 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                     </div>
                 </div>
 
-                <div class="col-lg-12">
-                                <h3 class="section-title" style="margin-bottom: 10px !important; ">FULL STACK DATA SCIENCE</h3>
-
-                    <div class="row">
-                        <div class="splash-service-main position-relative">
-                            <div class="service-wrapper service-white">
-                                <div class="row g-0 five-cols">
-                                    <div class="col-lg-6 col-xl-2 col-md-6 col-sm-6 col-12 service__style--column">
-                                        <div class="service service__style--1">
-                                            <div class="icon">
-                                                <img src="assets/images/icons/icons-01.png" alt="Icon Images">
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title">DATA SCIENCE</h4>
-                                                <p>Statistics, Python & SQL, Practical data problem solving, Learn from industry professionals, Designed for career switchers.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-xl-2 col-md-6 col-sm-6 col-12 service__style--column">
-                                        <div class="service service__style--1">
-                                            <div class="icon">
-                                                <img src="assets/images/icons/icons-02.png" alt="Icon Images">
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title">DATA ENGINEERING</h4>
-                                                <p>Spark, Hadoop & Kafka, Build scalable data systems, Work with AWS & databases, Prepare for Data Engineer roles.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-xl-2 col-md-6 col-sm-6 col-12 service__style--column">
-                                        <div class="service service__style--1">
-                                            <div class="icon">
-                                                <img src="assets/images/icons/icons-03.png" alt="Icon Images">
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title">DATA ANALYST</h4>
-                                                <p>Excel, SQL & BI tools, Data-driven decision making, Real business scenarios, Analyst-focused preparation.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6 col-xl-2 col-md-6 col-sm-6 col-12 service__style--column">
-                                        <div class="service service__style--1">
-                                            <div class="icon">
-                                                <img src="assets/images/icons/icon-aiml.png" alt="Icon Images">
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title">AI / ML</h4>
-                                                <p>Core machine learning concepts, Neural networks & AI models, Production-ready ML systems, AI & ML Engineer careers.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-xl-2 col-md-6 col-sm-6 col-12 service__style--column">
-                                        <div class="service service__style--1">
-                                            <div class="icon">
-                                                <img src="assets/images/icons/icons-04.png" alt="Icon Images">
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title">GEN AI</h4>
-                                                <p>LLMs & prompt engineering, Chatbots & AI applications, Automation & content generation, Next-gen AI career paths.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
 
             </div>
         </div>
+
         <div class="shape-wrapper">
             <div class="shape-image shape-1">
                 <img src="assets/images/splash/icons/shape-1.png" alt="Shape Images">
@@ -343,6 +277,84 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
         </div>
     </div>
     <!-- End Slider Area  -->
+
+    <div class="col-lg-12 rbt-splash-courses bg-color-white">
+        <h3 class="section-title" style="margin-bottom: 10px !important; ">FULL STACK DATA SCIENCE</h3>
+
+                    <div class="row">
+                        <div class="splash-service-main position-relative">
+                            <div class="service-wrapper service-white">
+                                <div class="row g-0 five-cols justify-content-center">
+                                    <div class="col-lg-6 col-xl-4 col-md-6 col-sm-6 col-12 service__style--column">
+                                        <div class="service service__style--1">
+                                            <div class="icon">
+                                                <img src="assets/images/icons/icons-01.png" alt="Icon Images">
+                                                <h4 class="title">DATA SCIENCE</h4>
+                                            </div>
+                                            <div class="content">
+                                                
+                                                <p>Statistics, Python & SQL, Practical data problem solving, Learn from industry professionals, Designed for career switchers.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-xl-4 col-md-6 col-sm-6 col-12 service__style--column">
+                                        <div class="service service__style--1">
+                                            <div class="icon">
+                                                <img src="assets/images/icons/icons-02.png" alt="Icon Images">
+                                                 <h4 class="title">DATA ENGINEER</h4>
+                                            </div>
+                                            <div class="content">
+                                               
+                                                <p>Spark, Hadoop & Kafka, Build scalable data systems, Work with AWS & databases, Prepare for Data Engineer roles.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-xl-4 col-md-6 col-sm-6 col-12 service__style--column">
+                                        <div class="service service__style--1">
+                                            <div class="icon">
+                                                <img src="assets/images/icons/icons-03.png" alt="Icon Images">
+                                                <h4 class="title">DATA ANALYST</h4>
+                                            </div>
+                                            <div class="content">
+                                                
+                                                <p>Excel, SQL & BI tools, Data-driven decision making, Real business scenarios, Analyst-focused preparation.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-xl-4 col-md-6 col-sm-6 col-12 service__style--column">
+                                        <div class="service service__style--1">
+                                            <div class="icon">
+                                                <img src="assets/images/icons/icon-aiml.png" alt="Icon Images">
+                                                <h4 class="title">AI / ML</h4>
+                                            </div>
+                                            <div class="content">
+                                                
+                                                <p>Core machine learning concepts, Neural networks & AI models, Production-ready ML systems, AI & ML Engineer careers.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-4 col-md-6 col-sm-6 col-12 service__style--column">
+                                        <div class="service service__style--1">
+                                            <div class="icon">
+                                                <img src="assets/images/icons/icons-04.png" alt="Icon Images">
+                                                <h4 class="title">GEN AI</h4>
+                                            </div>
+                                            <div class="content">
+                                                
+                                                <p>LLMs & prompt engineering, Chatbots & AI applications, Automation & content generation, Next-gen AI career paths.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
     <!-- Start Coding Quality Area  -->
     <div class="rbt-splash-coding-quality-area bg-color-white rbt-section-gapBottom">
@@ -358,20 +370,20 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                 </div>
                 <div class="row g-5">
                     <!-- Start Top Feature  -->
-                    <div class="col-lg-3 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up"
+                    <div class="col-lg-3 col-md-8 col-12" data-sal-delay="150" data-sal="slide-up"
                         data-sal-duration="800">
                         <div class="top-features-box h-100 text-center bg-gradient-15">
                             <div class="inner">
                                 <div class="content">
                                     <span class="pre-title text-uppercase">Industry-Driven Curriculum</span>
-                                    <h4 class="title">Built for real-world impact, not just theory.</h4>
+                                    <h4 class="title">Real-world learning Real impact..</h4>
                                 </div>
                                 <div class="thumbnail">
                                     <img src="assets/images/splash/topfeature/01.png" alt="Image">
                                 </div>
                                 <div class="rbt-badge-group">
                                     <span class="rbt-badge">Designed with real industry use-cases</span>
-                                    <span class="rbt-badge">Aligned with current tech & hiring trends</span>
+                                    <span class="rbt-badge">Aligned with current tech & hiring</span>
                                     <span class="rbt-badge">Continuously updated learning paths</span>
                                     <span class="rbt-badge">Skills that match real job roles</span>
                                     <span class="rbt-badge">“Learn what the industry actually uses.”</span>
@@ -386,12 +398,12 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                     <!-- End Top Feature  -->
 
                     <!-- Start Top Feature  -->
-                    <div class="col-lg-3 col-md-6 col-12" data-sal-delay="200" data-sal="slide-up"
+                    <div class="col-lg-3 col-md-8 col-12" data-sal-delay="200" data-sal="slide-up"
                         data-sal-duration="800">
                         <div class="top-features-box h-100 text-center bg-gradient-16">
                             <div class="inner">
                                 <div class="content">
-                                    <span class="pre-title text-uppercase">Hands-On, Project-First Learning</span>
+                                    <span class="pre-title text-uppercase">Hands-On Project</span>
                                     <h4 class="title">Learning by doing—from day one.</h4>
                                 </div>
 
@@ -415,13 +427,13 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                     <!-- End Top Feature  -->
 
                     <!-- Start Top Feature  -->
-                    <div class="col-lg-3 col-md-6 col-12" data-sal-delay="250" data-sal="slide-up"
+                    <div class="col-lg-3 col-md-8 col-12" data-sal-delay="250" data-sal="slide-up"
                         data-sal-duration="800">
                         <div class="top-features-box h-100 text-center bg-gradient-17">
                             <div class="inner">
                                 <div class="content">
                                     <span class="pre-title text-uppercase">Expert Mentors </span>
-                                    <h4 class="title">Learn from professionals.</h4>
+                                    <h4 class="title">Learn from Exp. professionals.</h4>
                                 </div>
 
                                 <div class="thumbnail">
@@ -443,13 +455,13 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12" data-sal-delay="250" data-sal="slide-up"
+                    <div class="col-lg-3 col-md-8 col-12" data-sal-delay="250" data-sal="slide-up"
                         data-sal-duration="800">
-                        <div class="top-features-box h-100 text-center bg-gradient-17">
+                        <div class="top-features-box h-100 text-center bg-gradient-18">
                             <div class="inner">
                                 <div class="content">
                                     <span class="pre-title text-uppercase">Career Support</span>
-                                    <h4 class="title">Support beyond learning—focused on outcomes.</h4>
+                                    <h4 class="title">Support focused on outcomes.</h4>
                                 </div>
 
                                 <div class="thumbnail">
@@ -487,9 +499,9 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                         <div class="section-title text-center">
                             <span class="subtitle bg-secondary-opacity">You Can Customize Everything
                             </span>
-                            <h2 class="title">Take your Website to The <span class="theme-gradient"> Next Level!</span>
+                            <h2 class="title">Take your Career to The <span class="theme-gradient"> Next Level!</span>
                             </h2>
-                            <p class="description mt--20">An all-in-one template with powerful features.
+                            <p class="description mt--20">ThinqNxt will support you.
                             </p>
                         </div>
                     </div>
@@ -502,9 +514,9 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                                 <div class="col-lg-4 col-md-12 col-sm-12 col-12 mt_md--30 mt_sm--30 order-2 order-lg-1">
 
                                     <div class="section-title text-start mb--60">
-                                        <span class="subtitle bg-primary-opacity">All in One for Education
+                                        <span class="subtitle bg-primary-opacity">All-in-One for Career Growth
                                         </span>
-                                        <h4 class="title">Layout Ready, Build Everything.</h4>
+                                        <h4 class="title">Career Launchpad & Resume Building .</h4>
                                     </div>
 
                                     <div class="advance-tab-button advance-tab-button-1">
@@ -516,8 +528,8 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                                                     aria-controls="layouttab1" aria-selected="false">
                                                     <div class="tab">
                                                         <h4 class="title"><img
-                                                                src="assets/images/splash/icons/online-course.png"
-                                                                alt="advance-tab-image"> Courses Layout.</h4>
+                                                                src="assets/images/icons/Mock-HR.png"
+                                                                alt="advance-tab-image"> Mock HR.</h4>
                                                     </div>
                                                 </a>
                                             </li>
@@ -529,8 +541,8 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                                                     <div class="tab">
                                                         <h4 class="title"><img
                                                                 src="assets/images/splash/icons/header.png"
-                                                                alt="advance-tab-image"> Header layout.</h4>
-                                                    </div>
+                                                                alt="advance-tab-image">Header layout.</h4>   
+                                                        </div>
                                                 </a>
                                             </li>
 

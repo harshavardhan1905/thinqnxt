@@ -8,6 +8,7 @@ $data = json_decode(file_get_contents("php://input"), true);
 
 if (
     empty($data['name']) ||
+    empty($data['code']) ||
     empty($data['email']) ||
     empty($data['phone']) ||
     empty($data['course'])
@@ -21,8 +22,9 @@ if (
 }
 
 $name   = trim($data['name']);
-$email  = trim($data['email']);
 $phone  = trim($data['phone']);
+$ccode = trim($data['code']);
+$email  = trim($data['email']);
 $course = trim($data['course']);
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -35,9 +37,9 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 $stmt = $conn->prepare(
-    "INSERT INTO bookdemo (name, phone, email, selected) VALUES (?, ?, ?, ?)"
+    "INSERT INTO bookdemo (name, country_code, phone, email, selected) VALUES (?, ?, ?, ?, ?)"
 );
-$stmt->bind_param("ssss", $name, $email, $phone, $course);
+$stmt->bind_param("sssss", $name, $ccode, $phone, $email,  $course);
 
 if ($stmt->execute()) {
     echo json_encode([

@@ -29,6 +29,7 @@ form.addEventListener("submit", async (e) => {
     const data = {
         name: form.name.value.trim(),
         email: form.email.value.trim(),
+        code: form.code.value.trim(),
         phone: form.phone.value.trim(),
         course: form.course.value
     };
