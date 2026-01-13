@@ -2,6 +2,12 @@
 /* =====================================================
 -------------------BOOK DEMO FROM CSS----------------
 ===================================================== */
+
+.bg-color-white{
+    // background: radial-gradient(900px 420px at 20% 0%, rgba(245,197,24,.18), transparent 60%), radial-gradient(650px 320px at 90% 20%, rgba(11,15,26,.10), transparent 60%), rgba(255,255,255,.76) !important;
+    // background-color: var(--color-white);
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+}
 .full-width-wrapper {
     width: 100%;
     display: flex;
@@ -402,8 +408,8 @@ select{
     width: 35px;
     height: 35px;
     margin: 5px 10px 10px 10px;
-    border: solid 1px grey;
-    border-radius: 5px;
+    // border: solid 1px grey;
+    border-radius: 10px;
     padding: 4px;
     background: transparent;
     filter: contrast(1.5);
@@ -417,7 +423,7 @@ select{
 
 .rbt-splash-courses {
     position: relative;
-    padding: 80px 30px;
+    padding: 0px 0px 120px;
     
     overflow: hidden;
 }
@@ -435,12 +441,13 @@ select{
     pointer-events: none;
 }
 .rbt-splash-courses .section-title {
-    color: #facc15; /* soft yellow */
+    color: var(--color-heading); /* soft yellow */
     font-weight: 800;
     letter-spacing: 1px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     text-transform: uppercase;
+    font-size: 30px !important;
 }
 .service-wrapper {
     background: transparent;
@@ -451,29 +458,32 @@ select{
     padding: 36px 28px;   
     min-width: 260px;      
     border-radius: 18px;
-    background: rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    // background: radial-gradient(520px 260px at 10% 0%, rgba(245,197,24,.16), transparent 60%), rgba(255,255,255,.74);
+    background: radial-gradient( 520px 260px at 10% 0%, rgba(245, 197, 24, 0.16) 0%, rgba(245, 197, 24, 0.12) 20%, rgba(245, 197, 24, 0.06) 40%, transparent 60% );
+    // background: rgba(0, 0, 0, 0.08);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(20, 1, 1, 0.15);
     transition: all 0.35s ease;
 }
 
 .service__style--1 .icon img {
-    width: 50px;
+    width: 40px;
     margin-bottom: 15px;
     filter: drop-shadow(0 0 6px rgba(250, 204, 21, 0.6));
 }
 
 
 .service__style--1 .title {
-    color: #facc15;
+    // color: #facc15;
     font-size: 16px;
     font-weight: 700;
-    margin-top: 10px;
+    // margin-top: 10px;
 }
 .service__style--1 .content p {
     // color: #cbd5f5;
-    color: #000;
+    color: #334155;
     font-size: 14px;
     line-height: 1.7;
 }
@@ -481,21 +491,175 @@ select{
 .service__style--column {
     padding: 15px;
 }
-.service__style--1::after {
-    content: "";
-    position: absolute;
-    inset: auto 20% -10px 20%;
-    height: 2px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        #38bdf8,
-        transparent
-    );
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+
 
 .service__style--1:hover::after {
     opacity: 1;
+}
+/* Make card relative */
+.service-card-arrow {
+    position: relative;
+}
+
+/* Arrow container */
+.card-arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    color: #111;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+.service__style--1:hover .card-arrow{
+    border:1px solid rgba(245,197,24,.55);
+    transform: translateY(-3px) scale(1.05);
+    color: #000;
+    box-shadow: 0 5px 10px rgba(149, 152, 157, 0.35);
+
+}
+
+
+/* Optional: icon smoothness */
+.card-arrow svg {
+    transition: transform 0.3s ease;
+}
+
+.service-card-arrow:hover .card-arrow svg {
+    transform: rotate(0deg) translateX(2px);
+}
+
+/* =====================================
+   PROGRAM HIGHLIGHTS – TRANSPARENT STYLE
+   ===================================== */
+
+/* Section – fully transparent */
+.program-highlights.transparent {
+    padding: 90px 0;
+    background: transparent;
+}
+
+/* Section Heading */
+.section-head h2 {
+    font-size: 38px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.section-head h2 span {
+    color: #f5c518;
+}
+
+.section-head p {
+    margin-top: 10px;
+    color: #6b7280;
+    font-size: 16px;
+}
+
+/* Layout Grid */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+    align-items: center;
+}
+
+/* Left Content */
+.highlights-list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+/* Highlight Item */
+.highlight-item {
+    padding-left: 20px;
+    border-left: 3px solid rgba(245, 197, 24, 0.6);
+}
+
+.highlight-item h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.highlight-item p {
+    margin-top: 6px;
+    font-size: 15px;
+    color: #4b5563;
+}
+
+/* Right Stats */
+.highlight-visual {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* Stat Card */
+.stat-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 18px;
+    padding: 26px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Stat Text */
+.stat-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f5c518;
+}
+
+.stat-card span {
+    margin-top: 6px;
+    display: block;
+    font-size: 14px;
+    color: #374151;
+}
+.download-btn-div{
+    border-left: none !important;
+}
+.brochure-btn{
+    padding: 10px;
+    background: transparent;
+    border-radius: 5px;
+    color: #1c1c1c;
+    font-weight: 500;
+}
+.brochure-btn:hover{
+    background-color: rgb(253, 255, 186);
+}
+
+/* Hover Effect – Subtle Premium */
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-head h2 {
+        font-size: 32px;
+    }
 }

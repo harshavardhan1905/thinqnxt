@@ -1734,8 +1734,8 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                                             <img class="tool-img" src="assets/images/tools/CatBoost.png" alt="">
                                         </b> 
                                          <b class="is-hidden theme-gradient" style="font-size: 40px">
-                                            <img class="tool-img" src="assets/images/tools/AZURE.jpg" alt="">
-                                            <img class="tool-img" src="assets/images/tools/AWS.avif" alt="">
+                                            <img class="tool-img" src="assets/images/tools/AZURE.png" alt="">
+                                            <img class="tool-img" src="assets/images/tools/aws.png" alt="">
                                             <img class="tool-img" src="assets/images/tools/Google-Cloud-Platform.jpeg" alt="">
                                             
                                          </b>
@@ -1957,12 +1957,17 @@ arrow.addEventListener("click", function () {
     <!-- End Slider Area  -->
 
     <div class="col-lg-12 rbt-splash-courses bg-color-white">
-        <h3 class="section-title" style="margin-bottom: 10px !important; ">FULL STACK DATA SCIENCE</h3>
+       
+         <div class="section-title text-center">
+                            <!-- <span class="subtitle bg-secondary-opacity">All in One Course</span> -->
+                            <h2 class="title">FULL STACK DATA SCIENCE</h2>
+                        </div>
 
                     <div class="row">
                         <div class="splash-service-main position-relative">
                             <div class="service-wrapper service-white">
                                 <div class="row g-0 five-cols justify-content-center">
+
                                     <div class="col-lg-6 col-xl-4 col-md-6 col-sm-6 col-12 service__style--column">
                                         <div class="service service__style--1">
                                             <div class="icon">
@@ -1973,6 +1978,18 @@ arrow.addEventListener("click", function () {
                                                 
                                                 <p>Statistics, Python & SQL, Practical data problem solving, Learn from industry professionals, Designed for career switchers.</p>
                                             </div>
+
+                                              <!-- Arrow button -->
+                                                <div class="card-arrow">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24">
+                                                        <path d="M7 17L17 7M7 7h10v10"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
                                         </div>
                                     </div>
 
@@ -1980,12 +1997,23 @@ arrow.addEventListener("click", function () {
                                         <div class="service service__style--1">
                                             <div class="icon">
                                                 <img src="assets/images/icons/icons-02.png" alt="Icon Images">
-                                                 <h4 class="title">DATA ENGINEER</h4>
+                                                 <h4 class="title">DATA ENGINEERING</h4>
                                             </div>
                                             <div class="content">
                                                
                                                 <p>Spark, Hadoop & Kafka, Build scalable data systems, Work with AWS & databases, Prepare for Data Engineer roles.</p>
                                             </div>
+                                            <!-- Arrow button -->
+                                                <div class="card-arrow">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24">
+                                                        <path d="M7 17L17 7M7 7h10v10"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
                                         </div>
                                     </div>
 
@@ -1999,6 +2027,17 @@ arrow.addEventListener("click", function () {
                                                 
                                                 <p>Excel, SQL & BI tools, Data-driven decision making, Real business scenarios, Analyst-focused preparation.</p>
                                             </div>
+                                            <!-- Arrow button -->
+                                                <div class="card-arrow">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24">
+                                                        <path d="M7 17L17 7M7 7h10v10"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
                                         </div>
                                     </div>
 
@@ -2013,6 +2052,18 @@ arrow.addEventListener("click", function () {
                                                 <p>Core machine learning concepts, Neural networks & AI models, Production-ready ML systems, AI & ML Engineer careers.
                                                 </p>
                                             </div>
+                                            <!-- Arrow button -->
+                                                <div class="card-arrow">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24">
+                                                        <path d="M7 17L17 7M7 7h10v10"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"/>
+                                                    </svg>
+                                                    <a href="#"></a>
+                                                </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-xl-4 col-md-6 col-sm-6 col-12 service__style--column">
@@ -2026,6 +2077,17 @@ arrow.addEventListener("click", function () {
                                                 <p>LLMs & prompt engineering, Chatbots & AI applications, Automation & content generation, Next-gen AI career paths.
                                                 </p>
                                             </div>
+                                            <!-- Arrow button -->
+                                                <div class="card-arrow">
+                                                    <svg width="18" height="18" viewBox="0 0 24 24">
+                                                        <path d="M7 17L17 7M7 7h10v10"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"/>
+                                                    </svg>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2041,7 +2103,7 @@ arrow.addEventListener("click", function () {
                 <div class="row mb--60">
                     <div class="col-lg-12">
                         <div class="section-title text-center">
-                            <span class="subtitle bg-secondary-opacity">All in One Course</span>
+                            <!-- <span class="subtitle bg-secondary-opacity">All in One Course</span> -->
                             <h2 class="title">Why Choose ThinqNxt.</h2>
                         </div>
                     </div>
@@ -2050,22 +2112,24 @@ arrow.addEventListener("click", function () {
                     <!-- Start Top Feature  -->
                     <div class="col-lg-3 col-md-8 col-12" data-sal-delay="150" data-sal="slide-up"
                         data-sal-duration="800">
-                        <div class="top-features-box h-100 text-center bg-gradient-15">
+                        <div class="top-features-box h-100 text-center">
                             <div class="inner">
                                 <div class="content">
                                     <span class="pre-title text-uppercase">Industry-Driven Curriculum</span>
-                                    <h4 class="title">Real-world learning Real impact..</h4>
+                                    <h5 class="title">Real-world learning Real impact.</h5>
                                 </div>
                                 <div class="thumbnail">
                                     <img src="assets/images/splash/topfeature/01.png" alt="Image">
                                 </div>
                                 <div class="rbt-badge-group">
-                                    <span class="rbt-badge">Designed with real industry use-cases</span>
-                                    <span class="rbt-badge">Aligned with current tech & hiring</span>
-                                    <span class="rbt-badge">Continuously updated learning paths</span>
-                                    <span class="rbt-badge">Skills that match real job roles</span>
-                                    <span class="rbt-badge">“Learn what the industry actually uses.”</span>
-                                    <span class="rbt-badge">& More...</span>
+                                    <ul>
+                                        <li><span class="rbt-badge">Skills that match real job roles</span></li>
+                                        <li><span class="rbt-badge">Aligned with current tech & hiring</span></li>
+                                        <li><span class="rbt-badge">Continuously updated learning paths</span></li>
+                                        <li><span class="rbt-badge">Designed with real industry use-cases</span></li>
+                                        <li><span class="rbt-badge">“Learn what the industry actually uses”</span></li>
+                                       
+                                    </ul>
                                 </div>
                             </div>
                             <div class="shape-image">
@@ -2078,23 +2142,24 @@ arrow.addEventListener("click", function () {
                     <!-- Start Top Feature  -->
                     <div class="col-lg-3 col-md-8 col-12" data-sal-delay="200" data-sal="slide-up"
                         data-sal-duration="800">
-                        <div class="top-features-box h-100 text-center bg-gradient-16">
+                        <div class="top-features-box h-100 text-center ">
                             <div class="inner">
                                 <div class="content">
                                     <span class="pre-title text-uppercase">Hands-On Project</span>
-                                    <h4 class="title">Learning by doing—from day one.</h4>
+                                    <h5 class="title">Learning by doing—from day one.</h5>
                                 </div>
 
                                 <div class="thumbnail">
                                     <img src="assets/images/splash/topfeature/02.png" alt="Image">
                                 </div>
                                 <div class="rbt-badge-group">
-                                    <span class="rbt-badge">Live, guided projects</span>
-                                    <span class="rbt-badge">Real-world problem solving</span>
-                                    <span class="rbt-badge">Practical assignments & labs</span>
-                                    <span class="rbt-badge">Portfolio-ready project outcomes</span>
-                                    <span class="rbt-badge">“You don’t just learn it—you build it.”</span>
-                                    <span class="rbt-badge">& More...</span>
+                                    <ul>
+                                        <li><span class="rbt-badge">Live, guided projects</span></li>
+                                        <li><span class="rbt-badge">Real-world problem solving</span></li>
+                                        <li><span class="rbt-badge">Practical assignments & labs</span></li>
+                                        <li><span class="rbt-badge">Portfolio-ready project outcomes</span></li>
+                                        <li><span class="rbt-badge">“You don’t just learn it—you build it”</span></li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="shape-image">
@@ -2107,11 +2172,11 @@ arrow.addEventListener("click", function () {
                     <!-- Start Top Feature  -->
                     <div class="col-lg-3 col-md-8 col-12" data-sal-delay="250" data-sal="slide-up"
                         data-sal-duration="800">
-                        <div class="top-features-box h-100 text-center bg-gradient-17">
+                        <div class="top-features-box h-100 text-center">
                             <div class="inner">
                                 <div class="content">
                                     <span class="pre-title text-uppercase">Expert Mentors </span>
-                                    <h4 class="title">Learn from Exp. professionals.</h4>
+                                    <h5 class="title">Learn from Experienced professionals.</h5>
                                 </div>
 
                                 <div class="thumbnail">
@@ -2119,12 +2184,13 @@ arrow.addEventListener("click", function () {
                                 </div>
 
                                 <div class="rbt-badge-group">
-                                    <span class="rbt-badge">Mentors with real industry experience</span>
-                                    <span class="rbt-badge">Clear concept explanation</span>
-                                    <span class="rbt-badge">Career-oriented guidance</span>
-                                    <span class="rbt-badge">Regular doubt-clearing sessions</span>
-                                    <span class="rbt-badge">“Learn from people who’ve been there.”</span>
-                                    <span class="rbt-badge">& More...</span>
+                                    <ul>
+                                        <li><span class="rbt-badge">Career-oriented guidance</span></li>
+                                        <li><span class="rbt-badge">Clear concept explanation</span></li>
+                                        <li><span class="rbt-badge">Regular doubt-clearing sessions</span></li>
+                                        <li><span class="rbt-badge">Mentors with real industry experience</span></li>
+                                        <li><span class="rbt-badge">“Learn from people who’ve been there”</span></li>
+                                    </ul>
                                 </div>
 
                             </div>
@@ -2135,11 +2201,11 @@ arrow.addEventListener("click", function () {
                     </div>
                     <div class="col-lg-3 col-md-8 col-12" data-sal-delay="250" data-sal="slide-up"
                         data-sal-duration="800">
-                        <div class="top-features-box h-100 text-center bg-gradient-18">
+                        <div class="top-features-box h-100 text-center ">
                             <div class="inner">
                                 <div class="content">
                                     <span class="pre-title text-uppercase">Career Support</span>
-                                    <h4 class="title">Support focused on outcomes.</h4>
+                                    <h5 class="title">Support focused on outcomes.</h5>
                                 </div>
 
                                 <div class="thumbnail">
@@ -2147,12 +2213,13 @@ arrow.addEventListener("click", function () {
                                 </div>
 
                                 <div class="rbt-badge-group">
-                                    <span class="rbt-badge">Resume & LinkedIn optimization</span> <br>
-                                    <span class="rbt-badge">Interview preparation & mock sessions</span> <br>
-                                    <span class="rbt-badge">Career guidance & referrals</span> <br>
-                                    <span class="rbt-badge">Long-term career mentoring</span> <br>
-                                    <span class="rbt-badge">“Success is the final goal.”</span> <br>
-                                    <span class="rbt-badge">& More...</span>
+                                    <ul>
+                                        <li><span class="rbt-badge">Long-term career mentoring</span> <br></li>
+                                        <li><span class="rbt-badge">Career guidance & referrals</span> <br></li>
+                                        <li><span class="rbt-badge">Resume & LinkedIn optimization</span> <br></li>
+                                        <li><span class="rbt-badge">Interview preparation & mock sessions</span> <br></li>
+                                        <li><span class="rbt-badge">“Success is the final goal”</span> <br></li>
+                                    </ul>
                                 </div>
 
                             </div>
@@ -2168,6 +2235,75 @@ arrow.addEventListener("click", function () {
     </div>
     <!-- End Coding Quality Area  -->
 
+
+    <!-- Start Enrollment & Kickstat -->
+<section class="program-highlights transparent">
+    <div class="container">
+
+        <div class="section-head text-center">
+            <h2>
+                Enroll & Kickstart Your <span>Journey</span>
+            </h2>
+            <p>Everything you need to succeed, structured for real outcomes.</p>
+        </div>
+
+        <div class="highlights-grid">
+
+            <!-- Left Details -->
+            <div class="highlights-list">
+                <div class="highlight-item">
+                    <h4>500+ Hours</h4>
+                    <p>Live classes with industry experts.</p>
+                </div>
+
+                <div class="highlight-item">
+                    <h4>30+ Projects</h4>
+                    <p>Build a portfolio recruiters love.</p>
+                </div>
+
+                <div class="highlight-item">
+                    <h4>1:1 Sessions</h4>
+                    <p>Personal mentorship & mock interviews.</p>
+                </div>
+
+                <div class="highlight-item">
+                    <h4>Lifetime Access</h4>
+                    <p>Keep learning forever.</p>
+                </div>
+                <div class="highlight-item download-btn-div">
+                    <button class='brochure-btn'>Download Brochure</button>
+                  <span>Next will start on 13th Jan '26</span>
+                </div>
+            </div>
+            
+            <!-- Right Stats -->
+            <div class="highlight-visual">
+                <div class="stat-card">
+                    <h3>40 LPA</h3>
+                    <span>Highest Package</span>
+                </div>
+
+                <div class="stat-card">
+                    <h3>1200+</h3>
+                    <span>Hiring Partners</span>
+                </div>
+
+                <div class="stat-card">
+                    <h3>8 LPA</h3>
+                    <span>Average Salary</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+        
+
+
+     <!-- End Enrollment & Kickstat -->
+
     <!-- Start Advance Tab  -->
     <div class="rbt-advance-tab-area splash-layout-presentation pb--40 bg-color-white">
         <div class="wrapper">
@@ -2175,8 +2311,8 @@ arrow.addEventListener("click", function () {
                 <div class="row mb--60">
                     <div class="col-lg-12">
                         <div class="section-title text-center">
-                            <span class="subtitle bg-secondary-opacity">You Can Customize Everything
-                            </span>
+                            <!-- <span class="subtitle bg-secondary-opacity">You Can Customize Everything
+                            </span> -->
                             <h2 class="title">Take your Career to The <span class="theme-gradient"> Next Level!</span>
                             </h2>
                             <p class="description mt--20">ThinqNxt will support you.
