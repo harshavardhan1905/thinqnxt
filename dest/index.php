@@ -1665,7 +1665,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
     <!-- End Mobile Area  -->
 
     <!-- Start Slider Area  -->
-    <div class="rbt-splash-slider d-flex align-items-center">
+    <div class="rbt-splash-slider d-flex align-items-center ">
 
         <!-- ==========DEMO form============ -->
         <div class="wrapper" style="width: 100% !important">
@@ -1956,21 +1956,20 @@ arrow.addEventListener("click", function () {
     </div>
     <!-- End Slider Area  -->
 
-    <div class="col-lg-12 rbt-splash-courses bg-color-white">
-       
-         <div class="section-title text-center">
+    <div class="col-lg-12 rbt-splash-courses bg-color-white container">
+                    <div class="section-title text-center">
                             <!-- <span class="subtitle bg-secondary-opacity">All in One Course</span> -->
-                            <h2 class="title">FULL STACK DATA SCIENCE</h2>
+                            <h2 class="title section-headings">Full Stack Data Science</h2>
                         </div>
 
-                    <div class="row">
+                    <div class="row mb--30">
                         <div class="splash-service-main position-relative">
                             <div class="service-wrapper service-white">
-                                <div class="row g-0 five-cols justify-content-center">
+                                <div class="row g-0 five-cols justify-content-left">
 
                                     <div class="col-lg-6 col-xl-4 col-md-6 col-sm-6 col-12 service__style--column">
                                         <div class="service service__style--1">
-                                            <div class="icon">
+                                            <div class="icon ">
                                                 <img src="assets/images/icons/icons-01.png" alt="Icon Images">
                                                 <h4 class="title">DATA SCIENCE</h4>
                                             </div>
@@ -2096,31 +2095,36 @@ arrow.addEventListener("click", function () {
                     </div>
                 </div>
 
-    <!-- Start Coding Quality Area  -->
-    <div class="rbt-splash-coding-quality-area bg-color-white rbt-section-gapBottom">
+    
+    
+                <!-- Start Coding Quality Area  -->
+    <div class="rbt-splash-coding-quality-area bg-color-white">
         <div class="wrapper">
             <div class="container">
-                <div class="row mb--60">
+                <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title text-center">
                             <!-- <span class="subtitle bg-secondary-opacity">All in One Course</span> -->
-                            <h2 class="title">Why Choose ThinqNxt.</h2>
+                            <h2 class="title section-headings">Why Choose ThinqNxt.</h2>
                         </div>
                     </div>
                 </div>
-                <div class="row g-5">
+                <div class="row  mb--30 mt--15">
                     <!-- Start Top Feature  -->
                     <div class="col-lg-3 col-md-8 col-12" data-sal-delay="150" data-sal="slide-up"
                         data-sal-duration="800">
                         <div class="top-features-box h-100 text-center">
                             <div class="inner">
-                                <div class="content">
-                                    <span class="pre-title text-uppercase">Industry-Driven Curriculum</span>
+                                <span class="pre-title text-uppercase">Industry-Driven Curriculum</span>
+
+                                <div class="content__service">
                                     <h5 class="title">Real-world learning Real impact.</h5>
+                                    <div class="thumbnail">
+                                    <img src="assets/images/splash/feature/education.jpg" alt="Image">
+
+                                    </div>
                                 </div>
-                                <div class="thumbnail">
-                                    <img src="assets/images/splash/topfeature/01.png" alt="Image">
-                                </div>
+
                                 <div class="rbt-badge-group">
                                     <ul>
                                         <li><span class="rbt-badge">Skills that match real job roles</span></li>
@@ -2144,14 +2148,17 @@ arrow.addEventListener("click", function () {
                         data-sal-duration="800">
                         <div class="top-features-box h-100 text-center ">
                             <div class="inner">
-                                <div class="content">
                                     <span class="pre-title text-uppercase">Hands-On Project</span>
+
+                                <div class="content__service">
                                     <h5 class="title">Learning by doing—from day one.</h5>
+                                    <div class="thumbnail">
+                                        <img src="assets/images/splash/feature/projects.jpg" alt="Image">
+
+                                </div>
                                 </div>
 
-                                <div class="thumbnail">
-                                    <img src="assets/images/splash/topfeature/02.png" alt="Image">
-                                </div>
+                                
                                 <div class="rbt-badge-group">
                                     <ul>
                                         <li><span class="rbt-badge">Live, guided projects</span></li>
@@ -2174,14 +2181,16 @@ arrow.addEventListener("click", function () {
                         data-sal-duration="800">
                         <div class="top-features-box h-100 text-center">
                             <div class="inner">
-                                <div class="content">
                                     <span class="pre-title text-uppercase">Expert Mentors </span>
+
+                                <div class="content__service">
                                     <h5 class="title">Learn from Experienced professionals.</h5>
+                                    <div class="thumbnail">
+                                    <img src="assets/images/splash/feature/mentor.jpg" alt="Image">
+                                </div>
                                 </div>
 
-                                <div class="thumbnail">
-                                    <img src="assets/images/splash/topfeature/03.png" alt="Image">
-                                </div>
+                                
 
                                 <div class="rbt-badge-group">
                                     <ul>
@@ -2203,14 +2212,16 @@ arrow.addEventListener("click", function () {
                         data-sal-duration="800">
                         <div class="top-features-box h-100 text-center ">
                             <div class="inner">
-                                <div class="content">
                                     <span class="pre-title text-uppercase">Career Support</span>
+
+                                <div class="content__service">
                                     <h5 class="title">Support focused on outcomes.</h5>
+                                    <div class="thumbnail">
+                                    <img src="assets/images/splash/feature/target.jpg" alt="Image">
+                                </div>
                                 </div>
 
-                                <div class="thumbnail">
-                                    <img src="assets/images/icons/card-icon-12.png" alt="Image">
-                                </div>
+                                
 
                                 <div class="rbt-badge-group">
                                     <ul>
@@ -2241,27 +2252,30 @@ arrow.addEventListener("click", function () {
     <div class="container">
 
         <div class="section-head text-center">
-            <h2>
+            <h2 class="section-headings">
                 Enroll & Kickstart Your <span>Journey</span>
             </h2>
-            <p>Everything you need to succeed, structured for real outcomes.</p>
+            <p class="text_align_left">Everything you need to succeed, structured for real outcomes.</p>
         </div>
 
         <div class="highlights-grid">
 
             <!-- Left Details -->
             <div class="highlights-list">
-                <div class="highlight-item">
+                <div class='key-highlights-div'>
+                    <div class="highlight-item">
                     <h4>500+ Hours</h4>
                     <p>Live classes with industry experts.</p>
+                    </div>
+
+                    <div class="highlight-item">
+                        <h4>30+ Projects</h4>
+                        <p>Build a portfolio recruiters love.</p>
+                    </div>
                 </div>
 
-                <div class="highlight-item">
-                    <h4>30+ Projects</h4>
-                    <p>Build a portfolio recruiters love.</p>
-                </div>
-
-                <div class="highlight-item">
+                <div class="key-highlights-div">
+                    <div class="highlight-item">
                     <h4>1:1 Sessions</h4>
                     <p>Personal mentorship & mock interviews.</p>
                 </div>
@@ -2270,7 +2284,8 @@ arrow.addEventListener("click", function () {
                     <h4>Lifetime Access</h4>
                     <p>Keep learning forever.</p>
                 </div>
-                <div class="highlight-item download-btn-div">
+                </div>
+                <div class="download-btn-div">
                     <button class='brochure-btn'>Download Brochure</button>
                   <span>Next will start on 13th Jan '26</span>
                 </div>
