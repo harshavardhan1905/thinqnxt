@@ -107,10 +107,10 @@ $countries = getAllCountries();
     });
 
     // Clicking arrow opens select
-arrow.addEventListener("click", function () {
-    select.focus();
-    select.click();
-});
+// arrow.addEventListener("click", function () {
+//     select.focus();
+//     select.click();
+// });
 
 </script>
 

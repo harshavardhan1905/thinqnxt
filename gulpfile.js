@@ -31,6 +31,7 @@ const paths = {
   vendorJs: "src/assets/js/vendor/**/*.js",
   pluginJs: "src/assets/js/plugins/**/*.js",
   apiJs: "src/assets/js/api/**/*.js",
+  customeJs: "src/assets/js/customeJs/**/*.js",
 
   images: "src/assets/images/**/*",
   fonts: "src/assets/fonts/**/*",
@@ -159,6 +160,12 @@ function apiJs() {
     .pipe(browserSync.reload({ stream: true }));
 }
 
+function customeJs() {
+  return gulp
+    .src(paths.customeJs)
+    .pipe(gulp.dest("dest/assets/js/customeJs"))
+    .pipe(browserSync.reload({stream: true}));
+}
 /* =========================
    ASSETS
 ========================= */
@@ -192,6 +199,7 @@ const build = gulp.series(
     vendorJs,
     pluginJs,
     apiJs,
+    customeJs,
     images,
     fonts,
     videos
@@ -225,6 +233,7 @@ function serve() {
   gulp.watch(paths.vendorJs, vendorJs);
   gulp.watch(paths.pluginJs, pluginJs);
   gulp.watch(paths.apiJs, apiJs);
+  gulp.watch(paths.customeJs, customeJs);
 
   gulp.watch(paths.images, gulp.series(images, browserSync.reload));
   gulp.watch(paths.fonts, gulp.series(fonts, browserSync.reload));
@@ -248,6 +257,7 @@ exports.serve = gulp.series(
     vendorJs,
     pluginJs,
     apiJs,
+    customeJs,
     images,
     fonts,
     videos

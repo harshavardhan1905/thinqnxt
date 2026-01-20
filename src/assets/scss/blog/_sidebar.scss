@@ -30,7 +30,7 @@
     }
     a {
         border: 0 none;
-        padding: 0px 35px;
+        padding: 0px 20px;
         text-transform: capitalize;
         background: var(--color-white);
         color: var(--color-body);
@@ -72,9 +72,11 @@
             margin-right: 6px;
         }
         &:hover {
-            background: var(--color-primary);
-            color: var(--color-white);
+            background: rgb(241, 243, 194);
+            color: var(--color-body);  
+            filter: brightness(1.2) contrast(1.2);
             transform: scale(1.1);
+            border: 1px solid yellow;
         }
     }
     &.medium-size {

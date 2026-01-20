@@ -7,6 +7,41 @@ require_once __DIR__ . "/config/dbcon.php";
 $db_status = $conn ? "✅ Database connection successful" : "❌ Database connection failed";
 ?>
 <body class="rbt-header-sticky">
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+
+  /* ---------------------------
+     SCROLL PANEL LOGIC
+  ---------------------------- */
+  console.log("hello from top");
+  const wrapper = document.querySelector('.skills-scroll-wrapper');
+  if (wrapper) {
+    const panels = wrapper.querySelectorAll('.skills-panel');
+
+    function activatePanel() {
+      const scrollTop = wrapper.scrollTop;
+      const panelHeight = wrapper.clientHeight;
+      const index = Math.round(scrollTop / panelHeight);
+
+      panels.forEach((panel, i) => {
+        panel.classList.toggle('active', i === index);
+      });
+    }
+
+    activatePanel();
+    wrapper.addEventListener('scroll', activatePanel);
+  }
+  /* ---------------------------
+     LUCIDE ICONS
+  ---------------------------- */
+  if (window.lucide) {
+    lucide.createIcons();
+  };
+</script>
+<script src='/assets/js/customeJs/Skills.js' defer></script>
+
+
+
 
 
     
@@ -24,7 +59,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
             </li>
         </ul>
     </div>
-    <!-- Start Campain Area  -->
+    <!-- Start top Area  -->
     <div class="rbt-header-campaign rbt-header-campaign-1 rbt-header-top-news bg-image1 d-none d-lg-block">
         <div class="wrapper">
             <div class="container">
@@ -53,7 +88,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
             </button>
         </div>
     </div>
-    <!-- End Campain Area  -->
+    <!-- End top Area  -->
 
 
     <!-- Start Header Area  -->
@@ -188,7 +223,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
 
                             <!-- Course assurance -->
                              <section class="course-highlights">
-                                <div class="highlight-item">
+                                <div class="highlight-item hero-hightlight-item">
                                     <span class="dot"></span>
                                     <div class="text">
                                         <h4><span class="red">100%</span> Online / Offline</h4>
@@ -198,7 +233,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
 
                                 <div class="divider"></div>
 
-                                <div class="highlight-item">
+                                <div class="highlight-item hero-hightlight-item">
                                     <div class="text">
                                         <h4><span class="red">6 - 8</span> Months</h4>
                                         <p>Course duration</p>
@@ -207,7 +242,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
 
                                 <div class="divider"></div>
 
-                                <div class="highlight-item">
+                                <div class="highlight-item hero-hightlight-item">
                                     <div class="text">
                                         <h4><span class="red">100%</span> Job Assurance</h4>
                                         <p>Placement Services</p>
@@ -216,7 +251,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
 
                                 <div class="divider"></div>
 
-                                <div class="highlight-item">
+                                <div class="highlight-item hero-hightlight-item">
                                     <div class="text">
                                         <h4><span class="red">Degree</span> Eligibility</h4>
                                         <p>Graduates & Professionals</p>
@@ -278,13 +313,15 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
     </div>
     <!-- End Slider Area  -->
 
-    <div class="col-lg-12 rbt-splash-courses bg-color-white container">
+    <!-- Start courses  -->
+
+    <div class="col-lg-12 padding_bottom_100px rbt-splash-courses bg-color-white container">
                     <div class="section-title text-center">
                             <!-- <span class="subtitle bg-secondary-opacity">All in One Course</span> -->
                             <h2 class="title section-headings">Full Stack Data Science</h2>
                         </div>
 
-                    <div class="row mb--30">
+                    <div class="row">
                         <div class="splash-service-main position-relative">
                             <div class="service-wrapper service-white">
                                 <div class="row g-0 five-cols justify-content-left">
@@ -416,11 +453,12 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                         </div>
                     </div>
                 </div>
-
+ <!-- end courses  -->
     
     
-                <!-- Start Coding Quality Area  -->
-    <div class="rbt-splash-coding-quality-area bg-color-white">
+      <!-- Start why choose thinqnxt Area  -->
+    
+       <div class="rbt-splash-coding-quality-area padding_bottom_100px bg-color-white">
         <div class="wrapper">
             <div class="container">
                 <div class="row">
@@ -431,7 +469,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                         </div>
                     </div>
                 </div>
-                <div class="row  mb--30 mt--15">
+                <div class="row  mt--15">
                     <!-- Start Top Feature  -->
                     <div class="col-lg-3 col-md-8 col-12" data-sal-delay="150" data-sal="slide-up"
                         data-sal-duration="800">
@@ -566,80 +604,540 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
             </div>
         </div>
     </div>
-    <!-- End Coding Quality Area  -->
+    <!-- End why choose thinqnxt Area  -->
 
 
     <!-- Start Enrollment & Kickstat -->
-<section class="program-highlights transparent">
-    <div class="container">
+        <section class="program-highlights padding_bottom_100px transparent">
+            <div class="container">
+                <div class="section-head text-center">
+                    <h2 class="section-headings">
+                        Enroll & Kickstart Your <span>Journey</span>
+                    </h2>
+                    <p class="text_align_left">Everything you need to succeed, structured for real outcomes.</p>
+                </div>
 
-        <div class="section-head text-center">
-            <h2 class="section-headings">
-                Enroll & Kickstart Your <span>Journey</span>
-            </h2>
-            <p class="text_align_left">Everything you need to succeed, structured for real outcomes.</p>
+                <div class="highlights-grid">
+
+                    <!-- Left Details -->
+                    <div class="highlights-list">
+                        <div class='key-highlights-div'>
+                            <div class="highlight-item">
+                            <h4>500+ Hours</h4>
+                            <p>Live classes with industry experts.</p>
+                            </div>
+
+                            <div class="highlight-item">
+                                <h4>30+ Projects</h4>
+                                <p>Build a portfolio recruiters love.</p>
+                            </div>
+                        </div>
+
+                        <div class="key-highlights-div">
+                            <div class="highlight-item">
+                            <h4>1:1 Sessions</h4>
+                            <p>Personal mentorship & mock interviews.</p>
+                        </div>
+
+                        <div class="highlight-item">
+                            <h4>Lifetime Access</h4>
+                            <p>Keep learning forever.</p>
+                        </div>
+                        </div>
+                        <div class="download-btn-div">
+                            <button class='brochure-btn'>Download Brochure</button>
+                        <span>Next will start on 13th Jan '26</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Stats -->
+                    <div class="highlight-visual">
+                        <div class="stat-card">
+                            <h3>40 LPA</h3>
+                            <span>Highest Package</span>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>1200+</h3>
+                            <span>Hiring Partners</span>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>8 LPA</h3>
+                            <span>Average Salary</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+     <!-- End Enrollment & Kickstat -->
+
+    <!-- Start Skills Presentation Area  -->
+        <div class="container rbt-elements-presentation-area overflow-hidden bg-color-white rbt-section-gapBottom ">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-head text-center">
+                            <h2 class="section-headings">Focused on practical <span>Skills</span></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <div class=" mt--30">
+                        <div class="scroll-animation">
+                            <!-- Start Single Testimonial  -->
+                            <div class="single-column-100">
+                                <div class="rbt-categori-list">
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="assets/images/tools/aws.png" class="skill-img" alt="">
+                                    </div>
+                                    <span>AWS</span>
+                                    </a>
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="/assets/images/tools/Azure.png" class="skill-img" alt="">
+                                    </div>
+                                    <span>Azure</span>
+                                    </a>
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="/assets/images/course/Google-Cloud-Platform.jpeg" class="skill-img" alt="">
+                                    </div>
+                                    <span>Google Cloud Platform</span>
+                                    </a>
+                                    <a href="#"  class="skill-pill">
+                                        <div class='skills-div'><img src="/assets/images/course/Apache-Airflow.svg" class="skill-img" alt="">
+                                    </div>
+                                    <span>Apache Airflow</span>
+                                    </a>
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="/assets/images/course/Apache-Kafka.png" class="skill-img" alt="">
+                                    </div>
+                                    <span>Apache Kafka</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="/assets/images/course/dbt.png" class="skill-img" alt="">
+                                    </div>
+                                    <span>dbt</span>
+                                    </a>
+
+                            
+                                    
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="/assets/images/course/Docker.webp" class="skill-img" alt="">
+                                    </div>
+                                    <span>Docker</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="/assets/images/course/Terraform.png" class="skill-img" alt="">
+                                    </div>
+                                    <span>Terraform</span>
+                                    </a>
+
+                                    
+
+                                </div>
+                            </div>
+                            <!-- End Single Testimonial  -->
+                            
+                        </div>
+                    </div>
+
+                    <div class=" mt--30">
+                        <div class="scroll-animation">
+                            <!-- Start Single Testimonial  -->
+                            <div class="single-column-100">
+                                <div class="rbt-categori-list">
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="/assets/images/course/Snowflake.png" class="skill-img" alt="">
+                                    </div>
+                                    <span>Snowflake</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/Keras.png" class="skill-img" alt=""></div>
+                                    <span>Keras</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="/assets/images/course/tableau.jpeg" class="skill-img" alt="">
+                                    </div>
+                                    <span>Tableau</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="/assets/images/course/MongoDB.webp" class="skill-img" alt="">
+                                    </div>
+                                    <span>MongoDB</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/PyTorch.jpg" class="skill-img" alt=""></div>
+                                    <span>PyTorch</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="/assets/images/course/Kibana.png" class="skill-img" alt="">
+                                    </div>
+                                    <span>Kibana</span>
+                                    </a>
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/FastAPI.png" class="skill-img" alt=""></div>
+                                    <span>FastAPI</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/Flask.jpg" class="skill-img" alt=""></div>
+                                    <span>Flask</span>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <!-- End Single Testimonial  -->
+                        </div>
+                    </div>
+
+                    <div class=" mt--30">
+                        <div class="scroll-animation">
+                            <!-- Start Single Testimonial  -->
+                            <div class="single-column-100">
+                                <div class="rbt-categori-list">
+                            <a href="#" class="skill-pill">
+                            <div class="skills-div"><img src="/assets/images/course/CatBoost.png" class="skill-img" alt=""></div>
+                            <span>CatBoost</span>
+                            </a>
+                            <a href="#" class="skill-pill">
+                                <div class="skills-div"><img src="/assets/images/course/Git.png" class="skill-img" alt=""></div>
+                                <span>Git</span>
+                                </a>
+                            
+
+                            <a href="#" class="skill-pill">
+                            <div class="skills-div"><img src="/assets/images/course/DagsHub.webp" class="skill-img" alt=""></div>
+                            <span>DagsHub</span>
+                            </a>
+
+                            <a href="#" class="skill-pill">
+                            <div class="skills-div"><img src="/assets/images/course/BentoML.png" class="skill-img" alt=""></div>
+                            <span>BentoML</span>
+                            </a>
+
+                            <a href="#" class="skill-pill">
+                            <div class="skills-div"><img src="/assets/images/course/Kubernetes.png" class="skill-img" alt=""></div>
+                            <span>Kubernetes</span>
+                            </a>
+
+                            <a href="#" class="skill-pill">
+                            <div class="skills-div"><img src="/assets/images/course/Helm.jpeg" class="skill-img" alt=""></div>
+                            <span>Helm</span>
+                            </a>
+
+                            <a href="#" class="skill-pill">
+                            <div class="skills-div"><img src="/assets/images/course/Power-BI.jpeg" class="skill-img" alt=""></div>
+                            <span>Power BI</span>
+                            </a>
+
+                            <a href="#" class="skill-pill">
+                            <div class="skills-div"><img src="/assets/images/course/Excel.jpeg" class="skill-img" alt=""></div>
+                            <span>Excel</span>
+                            </a>
+
+                            <a href="#" class="skill-pill">
+                            <div class="skills-div"><img src="/assets/images/course/Plotly.png" class="skill-img" alt=""></div>
+                            <span>Plotly</span>
+                            </a>
+                            </div>
+                            </div>
+                            <!-- End Single Testimonial  -->
+                        </div>
+                    </div>
+                    <div class=" mt--30">
+                        <div class="scroll-animation">
+                            <!-- Start Single Testimonial  -->
+                            <div class="single-column-100">
+                                <div class="rbt-categori-list">
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/Matplotlib.png" class="skill-img" alt=""></div>
+                                    <span>Matplotlib</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/Seaborn.png" class="skill-img" alt=""></div>
+                                    <span>Seaborn</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/Apache-Spark.png" class="skill-img" alt=""></div>
+                                    <span>Apache Spark</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/CI-CD-pipelines2.png" class="skill-img" alt=""></div>
+                                    <span>CI/CD Pipelines</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/NUMPY-300x300.png" class="skill-img" alt=""></div>
+                                    <span>NumPy</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/PANDAS.webp" class="skill-img" alt=""></div>
+                                    <span>Pandas</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/XGBoost.png" class="skill-img" alt=""></div>
+                                    <span>XGBoost</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- End Single Testimonial  -->
+                        </div>
+                    </div>
+
+                    <div class=" mt--30">
+                        <div class="scroll-animation">
+                            <!-- Start Single Testimonial  -->
+                            <div class="single-column-100">
+                                <div class="rbt-categori-list">
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/Streamlit.png" class="skill-img" alt=""></div>
+                                    <span>Streamlit</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/Scikit-learn.jpeg" class="skill-img" alt=""></div>
+                                    <span>Scikit-learn</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/LightGBM.png" class="skill-img" alt=""></div>
+                                    <span>LightGBM</span>
+                                    </a>
+
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/TensorFlow.jpeg" class="skill-img" alt=""></div>
+                                    <span>TensorFlow</span>
+                                    </a>
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="/assets/images/course/Tableau-Prep.png" class="skill-img" alt="">
+                                    </div>
+                                    <span>Tableau Prep</span>
+                                    </a>
+                                <a href="#" class="skill-pill">
+                                    <div class="skills-div">
+                                        <img src="/assets/images/course/Elasticsearch.webp" class="skill-img" alt="">
+                                    </div>
+                                    <span>Elasticsearch</span>
+                                    </a>
+                                    
+                                    <a href="#" class="skill-pill">
+                                    <div class="skills-div"><img src="/assets/images/course/MLflow.jpeg" class="skill-img" alt=""></div>
+                                    <span>MLflow</span>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                            <!-- End Single Testimonial  -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center mt--30">
+                            <span class="rbt-title-style-2">Save your time and money by Using Ready Elements</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- End Skills Presentation Area  -->
+
+
+
+    <!-- Carriculum start -->
+<div class="container rbt-elements-presentation-area overflow-hidden bg-color-white rbt-section-gapBottom">
+    <div class="wrapper">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-head text-center">
+                    <h2 class="section-headings">
+                        Learning Track & <span>Curriculum</span>
+                    </h2>
+                </div>
+            </div>
         </div>
 
-        <div class="highlights-grid">
+        <div class="col-lg-12 cur-con-sec">
+            <div class="col-lg-2"> 
+                images
+            </div>
+            <div class="col-lg-10">
+                <!-- SCROLL WRAPPER -->
+                    <div class="skills-scroll-wrapper">
 
-            <!-- Left Details -->
-            <div class="highlights-list">
-                <div class='key-highlights-div'>
-                    <div class="highlight-item">
-                    <h4>500+ Hours</h4>
-                    <p>Live classes with industry experts.</p>
+                        <!-- SECTION 1 -->
+                        <section class="skills-panel skill-track-section active">
+
+                            <div class="cur-heading">
+                                <h4>01: Data Engineering Essentials</h4>
+                                <p>
+                                Kick off your journey by mastering core principles, programming skills,
+                                and career-readiness strategies in Data Engineering.
+                                </p>
+                            </div>
+
+                            <div class="curriculum-grid">
+
+                                <ul class="curriculum-list">
+                                <li><i data-lucide="layers"></i> Introduction to Data Engineering</li>
+                                <li><i data-lucide="cpu"></i> Computer Science Fundamentals</li>
+                                <li><i data-lucide="code"></i> Python Programming Essentials</li>
+                                <li><i data-lucide="terminal"></i> Advanced Python for Data Engineers</li>
+                                <li><i data-lucide="filter"></i> Data Preparation & Cleaning for ML</li>
+                                </ul>
+
+                                <ul class="curriculum-list">
+                                <li><i data-lucide="box"></i> Docker & Containerization Basics</li>
+                                <li><i data-lucide="briefcase"></i> Crafting a Winning Job Application</li>
+                                <li><i data-lucide="database"></i> SQL Mastery for Data Engineering</li>
+                                <li><i data-lucide="trending-up"></i> Continuous Growth as a Data Engineer</li>
+                                <li><i data-lucide="sparkles"></i> Foundations of Generative AI</li>
+                                </ul>
+
+                            </div>
+                </section>
+
+            <!-- SECTION 2 -->
+            <section class="skills-panel skill-track-section">
+
+                <div class="cur-heading">
+                    <h4>02: Platform & Pipeline Architecture</h4>
+                    <p>
+                    Build resilient, end-to-end data platforms—secure by design—and learn
+                    how to model, store, and serve data at scale.
+                    </p>
+                </div>
+
+                <div class="architecture-grid">
+
+                    <!-- BLOCK 1 -->
+                    <div class="architecture-card">
+                    <div class="card-header">
+                        <span class="card-icon">🧱</span>
+                        <h5>Data Platforms & Pipelines</h5>
                     </div>
 
-                    <div class="highlight-item">
-                        <h4>30+ Projects</h4>
-                        <p>Build a portfolio recruiters love.</p>
+                    <ul class="architecture-list">
+                        <li>Designing Data Platforms & Pipelines</li>
+                        <li>Platform Security: Best Practices & Governance</li>
+                        <li>Selecting the Right Data Stores</li>
+                    </ul>
                     </div>
+
+                    <!-- BLOCK 2 -->
+                    <div class="architecture-card">
+                    <div class="card-header">
+                        <span class="card-icon">📐</span>
+                        <h5>Data Modeling Foundations</h5>
+                    </div>
+
+                    <ul class="architecture-list">
+                        <li>Introduction to Data Modeling</li>
+                        <li>Relational Data Modeling Techniques</li>
+                        <li>Dimensional Modeling for Analytics</li>
+                    </ul>
+                    </div>
+
                 </div>
 
-                <div class="key-highlights-div">
-                    <div class="highlight-item">
-                    <h4>1:1 Sessions</h4>
-                    <p>Personal mentorship & mock interviews.</p>
-                </div>
+                </section>
 
-                <div class="highlight-item">
-                    <h4>Lifetime Access</h4>
-                    <p>Keep learning forever.</p>
-                </div>
-                </div>
-                <div class="download-btn-div">
-                    <button class='brochure-btn'>Download Brochure</button>
-                  <span>Next will start on 13th Jan '26</span>
-                </div>
-            </div>
-            
-            <!-- Right Stats -->
-            <div class="highlight-visual">
-                <div class="stat-card">
-                    <h3>40 LPA</h3>
-                    <span>Highest Package</span>
-                </div>
 
-                <div class="stat-card">
-                    <h3>1200+</h3>
-                    <span>Hiring Partners</span>
-                </div>
+         <!-- SECTION 3 -->
+            <section class="skills-panel skill-track-section">
 
-                <div class="stat-card">
-                    <h3>8 LPA</h3>
-                    <span>Average Salary</span>
-                </div>
+            <div class="cur-heading">
+                <h4>03: Core Tools & Frameworks</h4>
+                <p>
+                Get hands-on experience with the tools that power modern data workflows —
+                from ingestion and orchestration to processing and visualization.
+                </p>
             </div>
 
+            <!-- TOOL SWITCHER -->
+            <div class="tool-switcher">
+
+                <button class="tool-tab" data-target="pipeline">
+                Pipelines & Processing
+                </button>
+
+                <button class="tool-tab is-active" data-target="storage">
+                Storage & Analytics
+                </button>
+
+            </div>
+
+            <!-- CONTENT -->
+            <div class="tool-content">
+
+                <!-- PIPELINE TOOLS -->
+                <div class="tool-group" id="pipeline">
+                <div class="tool-chip">FastAPI – API Development</div>
+                <div class="tool-chip">Apache Airflow – Workflow Orchestration</div>
+                <div class="tool-chip">Apache Spark – Distributed Processing</div>
+                <div class="tool-chip">Databricks – Unified Analytics Platform</div>
+                <div class="tool-chip">Apache Kafka – Stream Processing</div>
+                </div>
+
+                <!-- STORAGE TOOLS -->
+                <div class="tool-group is-active" id="storage">
+                <div class="tool-chip">MongoDB – NoSQL Databases</div>
+                <div class="tool-chip">Elasticsearch – Log & Search Analytics</div>
+                <div class="tool-chip">Snowflake – Cloud Data Warehousing</div>
+                <div class="tool-chip">dbt – Modular Data Transformations</div>
+                </div>
+
+            </div>
+
+            </section>
+
+
+            <!-- SECTION 4 -->
+            <section class="skills-panel">
+                Booy
+            </section>
+
+        </div>
+        <!-- END SCROLL WRAPPER -->
+            </div>
         </div>
 
     </div>
-</section>
+</div>
+<!-- End Elements Presentation Area  -->
 
-        
-
-
-     <!-- End Enrollment & Kickstat -->
+     <!-- Carriculum End -->
 
     <!-- Start Advance Tab  -->
     <div class="rbt-advance-tab-area splash-layout-presentation pb--40 bg-color-white">
@@ -776,132 +1274,6 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
         </div>
     </div>
     <!-- End Advance Tab  -->
-
-    <!-- Start Elements Presentation Area  -->
-    <div class="rbt-elements-presentation-area overflow-hidden bg-color-white rbt-section-gapBottom pt--80">
-        <div class="wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title text-center">
-                        <span class="subtitle bg-primary-opacity">You don't need any external plugins.</span>
-                        <h2 class="title"><strong class="theme-gradient">100+</strong> Elements included.</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="scroll-animation-all-wrapper">
-                <div class="scroll-animation-wrapper mt--30">
-                    <div class="scroll-animation scroll-right-left">
-                        <!-- Start Single Testimonial  -->
-                        <div class="single-column-100">
-                            <div class="rbt-categori-list">
-                                <a href="#"><i class="feather-credit-card"></i> Accordion</a>
-                                <a href="#"><i class="feather-folder"></i> Advance Tab</a>
-                                <a href="#"><i class="feather-heart"></i> Brand</a>
-                                <a href="#"><i class="feather-link-2"></i> Button</a>
-                                <a href="#"><i class="feather-award"></i> Badge</a>
-                                <a href="#"><i class="feather-layers"></i> Card</a>
-                                <a href="#"><i class="feather-log-in"></i> Call To Action</a>
-                                <a href="#"><i class="feather-hash"></i> Counter</a>
-                                <a href="#"><i class="feather-grid"></i> Categories</a>
-                                <a href="#"><i class="feather-mail"></i> Newsletter</a>
-                                <a href="#"><i class="feather-users"></i> Team</a>
-                                <a href="#"><i class="feather-twitter"></i> Social</a>
-                                <a href="#"><i class="feather-image"></i> Gallery</a>
-                                <a href="#"><i class="feather-dollar-sign"></i> Pricing</a>
-                                <a href="#"><i class="feather-percent"></i> Progressbar</a>
-                                <a href="#"><i class="feather-message-square"></i> Testimonial</a>
-                                <a href="#"><i class="feather-layout"></i> Service</a>
-                                <a href="#"><i class="feather-map"></i> Split Area</a>
-                                <a href="#"><i class="feather-search"></i> Search Style</a>
-                                <a href="#"><i class="feather-instagram"></i> Instagram Style</a>
-                                <a href="#"><i class="feather-list"></i> List Style</a>
-                                <a href="#"><i class="feather-airplay"></i> Creative Tab</a>
-                            </div>
-                        </div>
-                        <!-- End Single Testimonial  -->
-                    </div>
-                </div>
-
-                <div class="scroll-animation-wrapper mt--30">
-                    <div class="scroll-animation scroll-left-right">
-                        <!-- Start Single Testimonial  -->
-                        <div class="single-column-100">
-                            <div class="rbt-categori-list">
-                                <a href="#"><i class="feather-type"></i> Heading</a>
-                                <a href="#"><i class="feather-align-center"></i> Section Title</a>
-                                <a href="#"><i class="feather-arrow-right-circle"></i> Slider</a>
-                                <a href="#"><i class="feather-rotate-ccw"></i> Flip Box</a>
-                                <a href="#"><i class="feather-camera"></i> Fancy Image</a>
-                                <a href="#"><i class="feather-chrome"></i> Group Image</a>
-                                <a href="#"><i class="feather-circle"></i> Circle Badge</a>
-                                <a href="#"><i class="feather-toggle-left"></i> Creative Badge</a>
-                                <a href="#"><i class="feather-link"></i> Animated Button</a>
-                                <a href="#"><i class="feather-globe"></i> Language Switcher</a>
-                                <a href="#"><i class="feather-gift"></i> Offer Banner</a>
-                                <a href="#"><i class="feather-video"></i> Video Popup</a>
-                                <a href="#"><i class="feather-clock"></i> Timeline</a>
-                                <a href="#"><i class="feather-code"></i> Carousel Testimonial</a>
-                                <a href="#"><i class="feather-award"></i> Event Item</a>
-                                <a href="#"><i class="feather-user-check"></i> Team Member</a>
-                                <a href="#"><i class="feather-star"></i> Review</a>
-                                <a href="#"><i class="feather-voicemail"></i> Subscribe</a>
-                                <a href="#"><i class="feather-jash"></i> Counter</a>
-                                <a href="#"><i class="feather-skip-back"></i> Go to Top</a>
-                                <a href="#"><i class="feather-filter"></i> Isotope Filter</a>
-                                <a href="#"><i class="feather-bookmark"></i> Bookmark</a>
-                            </div>
-                        </div>
-                        <!-- End Single Testimonial  -->
-                    </div>
-                </div>
-
-                <div class="scroll-animation-wrapper mt--30">
-                    <div class="scroll-animation scroll-right-left">
-                        <!-- Start Single Testimonial  -->
-                        <div class="single-column-100">
-                            <div class="rbt-categori-list">
-                                <a href="#"><i class="feather-bold"></i> Animated Big Text</a>
-                                <a href="#"><i class="feather-user-plus"></i> Instructor Group</a>
-                                <a href="#"><i class="feather-heart"></i> Offer Badge</a>
-                                <a href="#"><i class="feather-file-text"></i> Exam Preparation</a>
-                                <a href="#"><i class="feather-box"></i> Modal</a>
-                                <a href="#"><i class="feather-copy"></i> Pricing Switcher</a>
-                                <a href="#"><i class="feather-database"></i> Step Box</a>
-                                <a href="#"><i class="feather-credit-card"></i> Tuition & Fees Table</a>
-                                <a href="#"><i class="feather-bar-chart"></i> Single Pricing</a>
-                                <a href="#"><i class="feather-more-horizontal"></i> Contact From</a>
-                                <a href="#"><i class="feather-watch"></i>Countdown Timer</a>
-                                <a href="#"><i class="feather-pie-chart"></i> Radial Progress</a>
-                                <a href="#"><i class="feather-command"></i> Parallax</a>
-                                <a href="#"><i class="feather-search"></i> Advance Search</a>
-                                <a href="#"><i class="feather-tv"></i> Content Box</a>
-                                <a href="#"><i class="feather-shopping-cart"></i> Minicart</a>
-                                <a href="#"><i class="feather-sidebar"></i> Offcanvas</a>
-                                <a href="#"><i class="feather-chevrons-right"></i> Image Carousel</a>
-                                <a href="#"><i class="feather-italic"></i> Sliding Heading</a>
-                                <a href="#"><i class="feather-paperclip"></i> Tag cloud</a>
-                                <a href="#"><i class="feather-menu"></i> Hamburger</a>
-                                <a href="#"><i class="feather-zap"></i> Advance Dropdown</a>
-                                <a href="#"><i class="feather-skip-forward"></i> Pagination</a>
-                            </div>
-                        </div>
-                        <!-- End Single Testimonial  -->
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title text-center mt--30">
-                        <span class="rbt-title-style-2">Save your time and money by Using Ready Elements</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Elements Presentation Area  -->
 
     <!-- Start Home Demo Area  -->
     <div class="home-demo-area rbt-section-gap bg-gradient-6 splash-masonary-wrapper-activation">
@@ -3747,6 +4119,8 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
 
 
     @@include('scripts.php')
+ 
+
 </body>
 
 </html>
