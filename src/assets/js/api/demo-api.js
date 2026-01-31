@@ -5,6 +5,11 @@ const msgEl = document.getElementById("responseMsg");
 
 let msgTimeout;
 
+//refresh function 
+window.onload = function () {
+    document.getElementById("form").reset();
+  };
+
 function showButtonMessage(text, type = "success", duration = 3000) {
     clearTimeout(msgTimeout);
 

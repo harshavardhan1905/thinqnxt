@@ -1,44 +1,66 @@
-console.log('Radar script loaded');
+console.log('Radar snap controller loaded');
+
 const wrapper = document.querySelector('.project-radar-section');
-const scrollContainer = document.querySelector('.project-content-scroll');
-const sections = document.querySelectorAll('.project-content-scroll section');
+const track = document.querySelector('.project-content-track'); // wrapper inside scroll
+const sections = Array.from(track.children);
 const points = document.querySelectorAll('.project-points circle');
 const labels = document.querySelectorAll('.project-labels text');
 
-/* GLOBAL SCROLL CAPTURE */
+let index = 0;
+let isAnimating = false;
+const total = sections.length;
+const DURATION = 600;
+
+function updateRadar(i) {
+  const key = sections[i].dataset.item;
+
+  sections.forEach(s => s.classList.remove('active'));
+  sections[i].classList.add('active');
+
+  points.forEach(p =>
+    p.classList.toggle('active', p.dataset.item === key)
+  );
+
+  labels.forEach((l, idx) =>
+    l.classList.toggle('active', idx + 1 == key)
+  );
+}
+
+function goTo(i) {
+  if (i < 0 || i >= total) return;
+
+  isAnimating = true;
+  index = i;
+
+  /* PURE TRANSITION — NO SCROLL */
+  track.style.transform = `translateY(-${i * 100}%)`;
+
+  setTimeout(() => {
+    isAnimating = false;
+    updateRadar(i);
+  }, DURATION);
+}
+
 wrapper.addEventListener(
   'wheel',
   e => {
+    if (isAnimating) return;
+
+    const down = e.deltaY > 0;
+    const atFirst = index === 0;
+    const atLast = index === total - 1;
+
+    /* 🔓 EDGE → PAGE SCROLL */
+    if ((atFirst && !down) || (atLast && down)) {
+      return;
+    }
+
+    /* 🔒 SNAP ONLY */
     e.preventDefault();
-    scrollContainer.scrollTop += e.deltaY;
+    goTo(down ? index + 1 : index - 1);
   },
   { passive: false }
 );
 
-/* SCROLL → RADAR SYNC */
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const activeItem = entry.target.dataset.item;
-
-        sections.forEach(s => s.classList.remove('active'));
-        entry.target.classList.add('active');
-
-        points.forEach(p =>
-          p.classList.toggle('active', p.dataset.item === activeItem)
-        );
-
-        labels.forEach((l, i) =>
-          l.classList.toggle('active', i + 1 == activeItem)
-        );
-      }
-    });
-  },
-  {
-    root: scrollContainer,
-    threshold: 0.6
-  }
-);
-
-sections.forEach(section => observer.observe(section));
+/* INIT */
+goTo(0);

@@ -2819,7 +2819,16 @@
 
 
 
+
+
 <!-- Main JS -->
 <script src="assets/js/main.js"></script>
+
+<!-- LUCID ICONS LOADING -->
+ <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
 </body>
 </html>

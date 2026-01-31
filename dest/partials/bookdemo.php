@@ -15,9 +15,10 @@ $countries = getAllCountries();
         <div class="partner-bar">
             <p>In Partnership with</p>
             <div class="partners">
-                <img src="logo1.png" alt="Partner 1">
-                <img src="logo2.png" alt="Partner 2">
-                <img src="logo3.png" alt="Partner 3">
+                <img src="../assets/images/companies/tcs.png" alt="Partner 1">
+                <img src="../assets/images/companies/zomato-text.png" alt="Partner 2">
+                <img src="../assets/images/companies/swiggy-text.png" alt="Partner 3">
+                <img src="../assets/images/companies/Razorpay.png" alt="Partner 4">
                 <!-- <img src="logo4.png" alt="Partner 4"> -->
             </div>
         </div>
@@ -46,14 +47,41 @@ $countries = getAllCountries();
                 
 
                 <!-- Invisible select -->
-                <select name="code" id="countrySelect" required>
+                <select name="code" id="countrySelect" required class="country-select">
+
+                    <!-- if condtion for get the india in top -->
                     <?php foreach ($countries as $con): ?>
-                        <option
+                        <?php if($con['phonecode'] == 91): ?>
+                            
+
+                             <option
                             value="+<?= htmlspecialchars($con['phonecode']) ?>"
                             data-label="+<?= htmlspecialchars($con['phonecode']) ?> <?= htmlspecialchars($con['country_name']) ?>"
                         >
                             +<?= htmlspecialchars($con['phonecode']) ?> <?= htmlspecialchars($con['country_name']) ?>
                         </option>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    <?php foreach($countries as $con): ?>
+                        <?php if($con['country_name']=='United States'): ?>
+                            <option
+                                value = "+<?= htmlspecialchars($con['phonecode']) ?>"
+                                data-label="+<?= htmlspecialchars($con['phonecode']) ?> <?= htmlspecialchars($con['country_name']) ?>"
+                            >
+                                +<?= htmlspecialchars($con['phonecode']) ?> <?= htmlspecialchars($con['country_name']) ?>
+                            </option>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                <!-- remaining countries data  -->
+                    <?php foreach($countries as $con): ?>
+                        <?php if($con['phonecode'] != 91 && $con['country_name'] !='United States' && $con['phonecode'] != 1): ?>
+                         <option
+                            value="+<?= htmlspecialchars($con['phonecode']) ?>"
+                            data-label="+<?= htmlspecialchars($con['phonecode']) ?> <?= htmlspecialchars($con['country_name']) ?>"              
+                            >
+                            +<?= htmlspecialchars($con['phonecode']) ?> <?= htmlspecialchars($con['country_name']) ?>
+                        </option>
+                        <?php endif; ?>
                     <?php endforeach; ?>
                 </select>
                 
@@ -98,6 +126,15 @@ $countries = getAllCountries();
 <script>
     const select = document.getElementById("countrySelect");
     const display = document.getElementById("codeDisplay");
+    const Form = document.getElementById('demoForm');
+
+
+// Force +91 on page load / refresh
+    window.addEventListener("DOMContentLoaded", function () {
+        Form.reset();
+        select.value = "+91";     // 👈 force India
+        display.textContent = "+91";
+    });
 
     // Initial value
     display.textContent = select.value;
@@ -105,6 +142,9 @@ $countries = getAllCountries();
     select.addEventListener("change", function () {
         display.textContent = this.value;
     });
+//     window.onload = function () {
+//         display.textContent = "+91";
+//   };
 
     // Clicking arrow opens select
 // arrow.addEventListener("click", function () {

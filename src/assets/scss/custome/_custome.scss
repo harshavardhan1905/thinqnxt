@@ -40,7 +40,7 @@
 }
 
 .partners img {
-    height: 32px;
+    height: 36px;
     background: #fff;
     padding: 4px 8px;
     border-radius: 6px;
@@ -114,7 +114,13 @@
     border-right: 1px solid #d0d5dd !important;
     border-radius: 0 0px 0px 0;
     margin-bottom: 0px !important;
-}   
+} 
+
+.country-select{
+  font-family: monospace;
+   font-size: 14px;
+}
+
 
 /* Arrow button */
 .select-arrow {
@@ -426,6 +432,10 @@ select{
 .padding_bottom_100px{
     padding-bottom: 100px !important;
 }
+.padding_bottom_200px{
+    padding-bottom: 200px !important;
+}
+
 .rbt-splash-courses {
     position: relative;
     padding: 0px;
@@ -537,9 +547,29 @@ width: 100px;
 .service__style--1 .content p {
     /* color: #cbd5f5; */
     color: #334155;
-    max-width: 300px;
+    max-width: 350px;
     font-size: 14px;
     line-height: 1.7;
+    padding: 10px;
+}
+.course-popular{
+  position: absolute;
+  right: 21px;
+  top: -17px;
+  width: 100px;
+  height: 24px;
+  text-align: center;
+  // font-size: 14px;
+  background: #f5c518;
+  border-radius: 17px;
+  box-shadow: 0 5px 10px rgba(149, 152, 157, 0.35);
+
+}
+.course-popular span{
+ font-size: 14px;
+  color: whitesmoke;
+  font-weight: 600;
+  margin-top: -64px;
 }
 
 .service__style--column {
@@ -556,15 +586,30 @@ width: 100px;
 .service-card-arrow {
     position: relative;
 }
+
+.crs-btm{
+  padding: 10px 10px 0px 10px;
+  border-top: 1px solid #80808040;
+  display: flex;
+  justify-content: space-between;
+}
+.crs-btm a{
+  font-size: 15px;
+  margin-top: 20px;
+}
+.service__style--1:hover .crs-btm a{
+    transform: translateY(-3px) scale(1.05);
+    color: rgba(245,197,24,.55);
+}
 .rbt-badge-group li{
     margin: 0px !important;
     padding: 0px !important;
 }
 /* Arrow container */
 .card-arrow {
-    position: absolute;
+    /* position: absolute;
     bottom: 20px;
-    right: 20px;
+    right: 20px; */
     cursor: pointer;
 
     width: 44px;
@@ -605,7 +650,9 @@ width: 100px;
 }
 .top-features-box:hover{
     /* background-color: #e2df9a; */
-    box-shadow: 0 4px 10px 2px;
+    // box-shadow: 0 4px 10px 2px;
+     border-color: rgba(245, 197, 24, 0.55);
+
 }
 .top-features-box:hover .thumbnail{
   background:radial-gradient(520px 260px at 10% 0%, rgba(245, 197, 24, 0.16) 0%, rgba(245, 197, 24, 0.12) 20%, rgba(245, 197, 24, 0.06) 40%, transparent 60%);
@@ -792,41 +839,83 @@ width: 100px;
 .skill-pill span {
   white-space: nowrap;
 }
-
-/* ==========================================
-         Skills section :end
- ========================================== */
-
-
-
+    
 /* =============================================
-           Carriculum start
+           Curriculum start
  ============================================= */
-.skills-scroll-wrapper {
-   height: 70vh;
-  overflow-y: auto;
-  
-  scroll-snap-type: y proximity;
-}
-
-.skills-panel {
-   min-height: 70vh;
-  scroll-snap-align: start;
-  display: block;
-  font-size: 40px;
-  font-weight: bold;
-
-
-  /* REMOVE opacity logic */
-}
-.skill-track-section {
+.cur-con-sec {
   position: relative;
+  /* height: 400vh; */
+}
+
+/* ===== STICKY FRAME ===== */
+/* .cur-con-sticky {
+  position: sticky;
+  top: 0;
+  height: 70vh;
+  display: flex;
+  overflow: hidden;
+  background: #fff;
+} */
+  .cur-con-sticky {
+  position: sticky;
+  top: 120px;       /* 👈 offset below heading */
+  height: 80vh;
+  display: flex;
+    flex-direction: column;
+  overflow: hidden;
+padding-top: 20px;
+  background: #fff;
+}
+.cur-con-title {
+  padding: 20px 0 10px;
+  background: #fff;
+  z-index: 3;
+}
+.cur-con-body {
+  display: flex;
+  flex: 1;                 /* fill remaining height */
+  align-items: center;
+  gap: 40px;
+}
+
+
+
+/* ===== RIGHT CONTENT FRAME ===== */
+.skills-scroll-wrapper {
+  position: relative;
+  width: 65%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ===== PANELS (NEW LOGIC – CRITICAL) ===== */
+.skills-panel {
+  position: absolute;          /* 🔑 layered */
+  inset: 0;
+  opacity: 0;
+  transform: translateY(40px);
+  pointer-events: none;
+
+  transition:
+    opacity 0.45s cubic-bezier(.4,0,.2,1),
+    transform 0.45s cubic-bezier(.4,0,.2,1);
+}
+
+.skills-panel.is-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ===== CONTENT WRAPPER (OLD DESIGN) ===== */
+.skill-track-section {
+  position: absolute;
   width: 100%;
-  align-self: flex-start;
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-  font-family: Inter, system-ui, sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0px 20px;
+
 }
 
 /* Header */
@@ -924,25 +1013,18 @@ width: 100px;
   color: #0b63ff;
   font-weight: 500;
 }
-.cur-con-sec{
-    display: flex;
-}
+
 /* Section wrapper */
-.skill-track-section {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
 
 /* Heading block */
 .cur-heading {
-  margin-bottom: 36px; /* space before lists */
+  margin-bottom: 25px; /* space before lists */
 
 }
 
 .cur-heading h4 {
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 10px;
   font-style: italic;
 }
@@ -973,10 +1055,10 @@ width: 100px;
 .curriculum-list li {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 
   padding: 14px 18px;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 
   background: #ffffff;
   border: 1px solid #eee;
@@ -1051,7 +1133,7 @@ width: 100px;
 .card-header {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 2px;
   margin-bottom: 18px;
 }
 
@@ -1061,7 +1143,7 @@ width: 100px;
 
 .card-header h5 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0;
   color: #111;
 }
@@ -1116,26 +1198,77 @@ width: 100px;
 .tool-content {
   margin-top: 30px;
 }
+/* ===== STATIC TOOLS LAYOUT ===== */
+.tools-static-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+/* Column card */
+.tools-column {
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+  border: 1px solid #eee;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+/* Badge (replaces buttons visually) */
+.tools-badge {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  font-weight: 600;
+  background: #fff;
+}
+
+.tools-badge-active {
+  background: #e6003e;
+  color: #fff;
+  border-color: #e6003e;
+}
+
+/* Chips reuse your existing design */
+.tools-column .tool-chip {
+  margin-bottom: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tools-static-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Groups */
 .tool-group {
   display: none;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: 0.25s ease;
 }
 
 .tool-group.is-active {
   display: grid;
+   opacity: 1;
+  transform: translateY(0);
 }
 
 /* Tool chips */
 .tool-chip {
-  padding: 16px 18px;
+  padding: 10px 18px;
   background: linear-gradient(180deg, #ffffff, #fafafa);
   border: 1px solid #eee;
   border-radius: 14px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   color: #222;
 
   transition: 0.25s ease;
@@ -1218,11 +1351,24 @@ width: 100px;
 }
 
 .capstone-card li {
-  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 0;
   border-top: 1px dashed #eee;
   font-size: 14.5px;
   font-weight: 300;
+  color: #222;
 }
+
+/* Lucide icon style */
+.capstone-card li svg {
+  width: 16px;
+  height: 16px;
+  color: #e6003e;
+  flex-shrink: 0;
+}
+
 @media (max-width: 576px) {
   .capstone-grid {
     grid-template-columns: 1fr;
@@ -1255,12 +1401,15 @@ width: 100px;
   align-items: center;
   gap: 14px;
   align-self: center;
+  transform: scale(1.25);   /* 🔼 increase size */
+  transform-origin: center;
 }
 
 /* Triangle base */
 .py-level {
   position: relative;
   height: 0;
+
   border-left: solid transparent;
   border-right: solid transparent;
   filter: drop-shadow(0 6px 10px rgba(238, 223, 111, 0.885));
@@ -1279,6 +1428,17 @@ width: 100px;
   border-right-width: 90px;
   border-bottom: 50px solid #e5e7eb;
 }
+#pyScrollPanel {
+  overflow: hidden; /* keep snap control */
+}
+
+#pyScrollPanel > .skills-panel {
+  pointer-events: auto;
+}
+
+
+
+
 
 .py-l3 {
   border-left-width: 120px;
@@ -1775,39 +1935,50 @@ width: 100px;
 =====================================================*/
         
     /* ===== LAYOUT ===== */
-    .project-radar-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      height: 54vh;
+    .project-radar-section { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      height: 47vh; overflow: hidden; 
+      position: sticky; 
+      top: 0; }
+    /* VIEWPORT */
+  .project-content-scroll {
+    height: 47vh;
+    overflow: hidden;
+    position: relative;
     }
 
-    /* ===== LEFT CONTENT ===== */
-    .project-content-scroll {
-      height: 44vh;
-      overflow: hidden;
-      padding:0px;
-      /* scroll-behavior: auto;*/
-    }
+  /* TRACK — THIS WAS MISSING */
+  .project-content-track {
+    height: 100%;
+    display: flex;
+    flex-direction: column;   /* 🔑 STACK VERTICALLY */
+    transition: transform 0.6s ease;
+    display: flex;
+  }
 
-    .project-content-scroll section {
-      min-height: 44vh;
-      display: flex;
-      align-items: center;
-      font-size: 36px;
-      opacity: 0.3;
-      overflow: hidden;
-      transition: opacity 0.4s ease;
-    }
+  /* EACH SLIDE */
+  .project-content-track section {
+    height: 100%;             /* EXACT FRAME */
+    flex-shrink: 0;           /* 🔑 prevent collapse */
+    display: flex;
+    align-items: center;
+    opacity: 0.3;
+    transition: opacity 0.4s ease;
+  }
 
-    .project-content-scroll section.active {
-      opacity: 1;
-    }
+  .project-content-track section.active {
+    opacity: 1;
+  }
+
+
 
     /* ===== RIGHT RADAR ===== */
     .project-radar-sticky {
-      position: sticky;
+      position: absolute;
+      right: -111px;
       top: 0;
-      height: 44vh;
+      height: 54vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1877,8 +2048,8 @@ width: 100px;
 
 /* Title */
 .project-learner-title {
-  font-size: 30px;
-  font-weight: 300;
+  font-size: 27px;
+  font-weight: 500;
   margin: 0px !important;
   color: #111;
 }
