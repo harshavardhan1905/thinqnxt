@@ -54,7 +54,7 @@
 }
 
 .earn-sec-title {
-  font-size: 42px;
+  font-size: 30px;
   font-weight: 400;
   line-height: 1.1;
   margin: 20px 0;

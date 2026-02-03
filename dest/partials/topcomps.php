@@ -5,7 +5,7 @@
    SECTION
 ================================ */
 .get-placed-section {
-  padding: 60px 0px;
+  /*padding: 60px 0px; */
 }
 
 /* ===============================

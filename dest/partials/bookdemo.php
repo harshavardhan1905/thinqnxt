@@ -13,7 +13,7 @@ $countries = getAllCountries();
 
         <!-- Partner Header -->
         <div class="partner-bar">
-            <p>In Partnership with</p>
+            <p class="partner-bar-p" style="color: #fff;">In Partnership with</p>
             <div class="partners">
                 <img src="../assets/images/companies/tcs.png" alt="Partner 1">
                 <img src="../assets/images/companies/zomato-text.png" alt="Partner 2">

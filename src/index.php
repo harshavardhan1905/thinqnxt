@@ -64,12 +64,12 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                         <div class="header-info">
                             <div class="logo logo-dark">
                                 <a href="index.php">
-                                    <img src="/assets/images/brand/Thinq-Nxt-logo-png-scaled.png" alt="Education Logo Images">
+                                    <img src="./assets/images/brand/Thinq-Nxt-logo-png-scaled.png" alt="Education Logo Images">
                                 </a>
                             </div>
                             <div class="logo d-none logo-light">
                                 <a href="index.php">
-                                    <img src="/assets/images/brand/Thinq-Nxt-logo-png-scaled.png" alt="Education Logo Images">
+                                    <img src="./assets/images/brand/Thinq-Nxt-logo-png-scaled.png" alt="Education Logo Images">
                                 </a>
                             </div>
                         </div>
@@ -283,7 +283,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
     <!-- Start courses  -->
 
     <div class="col-lg-12 padding_bottom_100px rbt-splash-courses bg-color-white container">
-                    <div class="section-head text-center">
+                    <div class="section-head text-center" style="padding-bottom: 30px !important;">
                             <!-- <span class="subtitle bg-secondary-opacity">All in One Course</span> -->
                             <h2 class="title section-headings">Full Stack <span>Data Science</span></h2>
                         </div>
@@ -448,7 +448,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="section-head text-center">
+                        <div class="section-head text-center" style="padding-bottom: 30px !important;">
                             <!-- <span class="subtitle bg-secondary-opacity">All in One Course</span> -->
                             <h2 class="title section-headings">Why Choose <span>ThinqNxt</span></h2>
                         </div>
@@ -605,7 +605,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
 
       <div class="col-lg-12 cur-con-sec ">
             <div class="cur-con-sticky">
-                <div class="section-head cur-con-title">
+                <div class="section-head cur-con-title" style="padding-bottom: 30px !important;">
                     <h2 class="section-headings">
                         Learning Track & <span>Curriculum</span>
                     </h2>
@@ -827,7 +827,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
             <div class="wrapper">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="section-head text-center">
+                        <div class="section-head text-center" style="padding-bottom: 20px !important;">
                             <h2 class="section-headings">Focused on practical <span>Skills</span></h2>
                         </div>
                     </div>
@@ -1123,7 +1123,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
     <!-- Start Enrollment & Kickstat -->
         <section class="program-highlights padding_bottom_100px transparent">
             <div class="container">
-                <div class="section-head text-center">
+                <div class="section-head text-center" style="padding-bottom: 20px !important;">
                     <h2 class="section-headings">
                         Enroll & Kickstart Your <span>Journey</span>
                     </h2>
@@ -1191,235 +1191,15 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
      <section class="program-highlights padding_bottom_100px transparent">
             <div class="container">
 
-                <div class="section-head text-center">
-                    <h2 class="section-headings">
-                        Learn & Build Real World <span>Projects</span>
-                    </h2>
-                    <p class="text_align_left">
-                        Dive into intensive training modules and master in-demand tools                    </p>
-                </div>
+                
 
-                <div class="project-radar-section">
-
-                    <!-- LEFT CONTENT -->
-                    <div class="project-content-scroll">
-                    <div class="project-content-track">
-                        <section data-item="1" class="project-radar-panel">
-
-                            <div class="project-radar-card project-learner-card">
-
-                                <!-- Header -->
-                                <h2 class="project-learner-title">Sessions</h2>
-
-                                <!-- Core message -->
-                                <p class="project-learner-text">
-                                Instructor-led live sessions + recordings
-                                </p>
-
-                                <!-- Icon points -->
-                                <div class="project-learner-features">
-
-                                <div class="project-feature">
-                                    <i data-lucide="book-open"></i>
-                                    <span>Live instructor-led interactive classes</span>
-                                </div>
-
-                                <div class="project-feature">
-                                    <i data-lucide="graduation-cap"></i>
-                                    <span>Session recordings for anytime revision</span>
-                                </div>
-
-                                <div class="project-feature">
-                                    <i data-lucide="route"></i>
-                                    <span>Doubt-clearing and concept walkthroughs</span>
-                                </div>
-
-                                </div>
-
-                            </div>
-
-                        </section>
-                        <section data-item="2" class="project-radar-panel">
-
-                            <div class="project-radar-card project-learner-card">
-
-                                <!-- Header -->
-                                <h2 class="project-learner-title">Cloud </h2>
-
-                                <!-- Core message -->
-                                <p class="project-learner-text">
-                                Practice on Cloud (AWS, Azure, GCP) with industry-ready labs
-                                </p>
-
-                                <!-- Icon points -->
-                                <div class="project-learner-features">
-
-                                    <div class="project-feature">
-                                    <i data-lucide="compass"></i>
-                                    <span>Hands-on labs on AWS, Azure & GCP</span>
-                                    </div>
-
-                                    <div class="project-feature">
-                                    <i data-lucide="layout-dashboard"></i>
-                                    <span>Real cloud infrastructure setup practice</span>
-                                    </div>
-
-                                    <div class="project-feature">
-                                    <i data-lucide="settings"></i>
-                                    <span>Industry-aligned cloud use cases</span>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-
-                        </section>
-                        <section data-item="3" class="project-radar-panel">
-
-                            <div class="project-radar-card project-learner-card">
-
-                                <!-- Header -->
-                                <h2 class="project-learner-title">Projects </h2>
-
-                                <!-- Core message -->
-                                <p class="project-learner-text">
-                                Complete 6+ capstone projects with mentorship
-                                </p>
-
-                                <!-- Icon points -->
-                                <div class="project-learner-features">
-
-                                <div class="project-feature">
-                                    <i data-lucide="user-check"></i>
-                                    <span>Build real-world end-to-end applications</span>
-                                    </div>
-
-                                    <div class="project-feature">
-                                    <i data-lucide="calendar-check"></i>
-                                    <span>Mentored capstone & mini projects</span>
-                                    </div>
-
-                                    <div class="project-feature">
-                                    <i data-lucide="help-circle"></i>
-                                    <span>Portfolio-ready project deployments</span>
-                                </div>
-
-                                </div>
-
-                            </div>
-
-                        </section>
-                        <section data-item="4" class="project-radar-panel">
-
-                            <div class="project-radar-card project-learner-card">
-
-                                <!-- Header -->
-                                <h2 class="project-learner-title">Challenges</h2>
-
-                                <!-- Core message -->
-                                <p class="project-learner-text">
-                               Weekly assignments and hackathons
-                                </p>
-
-                                <!-- Icon points -->
-                                <div class="project-learner-features">
-
-                                <div class="project-feature">
-                                <i data-lucide="clock"></i>
-                                <span>Weekly problem-solving assignments</span>
-                                </div>
-
-                                <div class="project-feature">
-                                <i data-lucide="repeat"></i>
-                                <span>Hackathons & time-bound tasks</span>
-                                </div>
-
-                                <div class="project-feature">
-                                <i data-lucide="flag"></i>
-                                <span>Skill-based evaluations & feedback</span>
-                                </div>
-
-
-                                </div>
-
-                            </div>
-
-                        </section>
-                        <section data-item="5" class="project-radar-panel">
-
-                            <div class="project-radar-card project-learner-card">
-
-                                <!-- Header -->
-                                <h2 class="project-learner-title">Problem Solving</h2>
-
-                                <!-- Core message -->
-                                <p class="project-learner-text">
-                                No technical background required —
-                                we teach from scratch
-                                </p>
-
-                                <!-- Icon points -->
-                                <div class="project-learner-features">
-
-                                <div class="project-feature">
-                                    <i data-lucide="briefcase"></i>
-                                    <span>Solve problems inspired by real industry use cases</span>
-                                </div>
-
-                                <div class="project-feature">
-                                    <i data-lucide="puzzle"></i>
-                                    <span>Break down complex problems into structured solutions</span>
-                                </div>
-
-                                <div class="project-feature">
-                                    <i data-lucide="wrench"></i>
-                                    <span>Apply concepts through hands-on implementation and fixes</span>
-                                </div>
-
-
-                                </div>
-
-                            </div>
-
-                        </section>
-                    </div>
-                    </div>
+                
 
                     <!-- RIGHT RADAR -->
-                    <div class="project-radar-sticky">
-                        <svg viewBox="-120 -120 240 240">
+                     
+                  @@include('radar-content.php')
 
-                        <polygon
-                            class="project-frame"
-                            points="0,-100 95,-31 59,81 -59,81 -95,-31"
-                        />
-
-                        <polygon
-                            class="project-fill"
-                            points="0,-60 60,-20 30,50 -30,50 -60,-20"
-                        />
-
-                        <g class="project-points">
-                            <circle cx="0" cy="-100" r="4" data-item="1"/>
-                            <circle cx="95" cy="-31" r="4" data-item="2"/>
-                            <circle cx="59" cy="81" r="4" data-item="3"/>
-                            <circle cx="-59" cy="81" r="4" data-item="4"/>
-                            <circle cx="-95" cy="-31" r="4" data-item="5"/>
-                        </g>
-
-                        <g class="project-labels">
-                            <text x="0" y="-105" text-anchor="middle">Sessions</text>
-                            <text x="100" y="-25">Cloud</text>
-                            <text x="60" y="95">Projects</text>
-                            <text x="-60" y="95" text-anchor="end">Challenges</text>
-                            <text x="-100" y="-25" text-anchor="end">Problem Solving</text>
-                        </g>
-
-                        </svg>
-                    </div>
-
-                </div>
+            
 
 
         </div>
@@ -1431,7 +1211,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
       <!-- Programming Cohorts start -->
       <section class="program-highlights padding_bottom_100px transparent">
             <div class="container">
-                 <div class="section-head text-center">
+                 <div class="section-head text-center" style="padding-bottom: 15px !important;">
                     <h2 class="section-headings">
                         Learn While You Intern <span>& Earn </span>
                     </h2>
@@ -1448,7 +1228,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
       <section class="program-highlights padding_bottom_100px transparent">
             <div class="container">
 
-                <div class="section-head text-center">
+                <div class="section-head text-center" >
                     <h2 class="section-headings">
                         Career Launchpad & Resume <span>Building</span>
                     </h2>
@@ -1457,7 +1237,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
                     </p>
                 </div>
 
-                <div class="launchpad-grid">
+                <div class="launchpad-grid" style="padding-top: 35px !important;">
 
                 <!-- Card 1 -->
                 <div class="flip-card">
@@ -1823,7 +1603,8 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
      <!-- Get placed in top companies start -->
         <section class="program-highlights padding_bottom_100px transparent">
             <div class="container">
-                 <div class="section-head text-center">
+                 <div class="section-head text-center" style="padding-bottom: 35px !important;"
+                 >
                     <h2 class="section-headings">
                         Get placed with <span>Top Companies</span>
                     </h2>
@@ -1842,7 +1623,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
      <!-- Programming Cohorts start -->
       <section class="program-highlights padding_bottom_100px transparent">
             <div class="container">
-                 <div class="section-head text-center">
+                 <div class="section-head text-center" style="padding-bottom: 35px !important;">
                     <h2 class="section-headings">
                         Program <span>Cohorts</span>
                     </h2>
@@ -1857,7 +1638,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
      <!-- Programming Certificate start -->
       <section class="program-highlights padding_bottom_100px transparent">
             <div class="container">
-                 <div class="section-head text-center">
+                 <div class="section-head text-center pad-bottom-0px">
                     <h2 class="section-headings">
                         Program <span>Certificate</span>
                     </h2>
@@ -1871,7 +1652,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
      <!-- Programming Testimonials start -->
       <section class="program-highlights padding_bottom_100px transparent">
             <div class="container">
-                 <div class="section-head text-center">
+                 <div class="section-head text-center" style="padding-bottom: 30px !important;">
                     <h2 class="section-headings">
                       Real Stories. <span>Real Impact. </span>
                     </h2>
@@ -1886,7 +1667,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
      <!-- Programming Founders start -->
       <section class="program-highlights padding_bottom_200px transparent">
             <div class="container">
-                 <div class="section-head text-center">
+                 <div class="section-head text-center" style="padding-bottom: 30px !important;">
                     <h2 class="section-headings">
                       Our <span>Founders Talk</span>
                     </h2>
@@ -1914,9 +1695,9 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
      <!-- ThinqNXT blogs End -->
 
    <!-- FAQ'S section Start -->
-        <section class="program-highlights padding_bottom_100px transparent">
+        <section class="program-highlights  transparent">
             <div class="container">
-                <div class="section-head text-center">
+                <div class="section-head text-center" style="padding-bottom: 30px !important;">
                     <h2 class="section-headings">
                        Frequently Asked <span>Questions</span>
                     </h2>
@@ -2059,7 +1840,7 @@ $db_status = $conn ? "✅ Database connection successful" : "❌ Database connec
 
 
 
-<script src='/assets/js/customeJs/Rader.js' defer></script>
+
 
 </body>
 

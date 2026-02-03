@@ -17,7 +17,7 @@
 .faq-sec-wrapper {
   max-width: 1200px;
   /* margin: 0 auto; */
-  padding: 80px 0px;
+  padding: 0px 0px;
   color: #111827;
   display: flex;
 }

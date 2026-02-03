@@ -11,7 +11,7 @@
 
 
 .vision-section {
-  padding: 100px 20px 0;
+  padding: 10px 20px 0;
   background: var(--bg-light);
 }
 
@@ -84,6 +84,7 @@
 .founder-card {
   border-radius: 14px;
   overflow: hidden;
+  cursor: pointer;
   background: linear-gradient(
     180deg,
     rgba(238, 196, 43, 0.35),
@@ -283,9 +284,11 @@
 
       <!-- LEFT -->
       <div class="vision-left">
-
+  
   <div class="founder-stack">
-    <div class="founder-card primary">
+    <div class="founder-card primary"
+    onclick="window.open('https://www.linkedin.com/in/kodali-utej/', '_blank')"
+    >
       <img src="../assets/images/founder/Utej-kodali-removebg-preview.webp" alt="">
       <div class="founder-info">
         <div class="founder-name">Utej Kodali</div>
@@ -293,7 +296,9 @@
       </div>
     </div>
 
-    <div class="founder-card secondary">
+    <div class="founder-card secondary"
+    onclick="window.open('https://www.linkedin.com/in/revanth-kodali/', '_blank')"
+    >
       <img src="../assets/images/founder/revanth-kodali-removebg-preview.png" alt="">
       <div class="founder-info">
         <div class="founder-name">Revanth Kodali</div>
@@ -304,7 +309,7 @@
 
   <div class="experience-card">
     <span>Combined Experience</span>
-    <strong>40+ Years</strong>
+    <strong>11+ Years</strong>
     <span>Global Tech Leadership</span>
   </div>
 
@@ -327,7 +332,7 @@
 
         <div class="vision-features">
           <div class="feature-card">
-            <div class="feature-title">lightbulb</div>
+            <div class="feature-title">Professionals</div>
             <div class="feature-subtitle">Why thinqNxt Exists</div>
             <div class="feature-text">
               Transforming aspirational learners into industry-ready data professionals
@@ -336,7 +341,7 @@
           </div>
 
           <div class="feature-card">
-            <div class="feature-title">school</div>
+            <div class="feature-title">Graduates</div>
             <div class="feature-subtitle">Student Success</div>
             <div class="feature-text">
               We go beyond certification by building real careers through mentorship,
@@ -345,7 +350,7 @@
           </div>
         </div>
 
-        <div class="founder-row">
+        <!-- <div class="founder-row">
           <div class="founder-mini">
             <img src="../assets/images/founder/Utej-kodali.png">
             <strong>Utej Kodali</strong>
@@ -356,7 +361,7 @@
             <strong>Revanth Kodali</strong>
             <span>Co-Founder</span>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>

@@ -36,6 +36,7 @@
   background: #f59e0b;
   top: -20%;
   right: -10%;
+  opacity: 0.1;
 }
 
 .certificate-blob.blue {
@@ -44,6 +45,7 @@
   background: #2563eb;
   bottom: -20%;
   left: -10%;
+  opacity: 0.1;
 }
 
 /* ===============================
@@ -54,7 +56,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 80px 24px;
+  padding: 0px 24px;
 }
 
 .certificate-wrapper {

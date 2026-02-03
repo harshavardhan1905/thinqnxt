@@ -7,7 +7,7 @@
     ================================ */
 
     .testimonials-section {
-      padding: 80px 20px 20px 0px;
+      padding: 0px 20px 20px 0px;
     }
 
     .testimonials-container {
@@ -189,15 +189,21 @@
       display: flex;
       justify-content: center;
       gap: 48px;
-      opacity: 0.4;
-      filter: grayscale(1);
+      opacity: 1;
+      /* filter: grayscale(1); */
     }
 
     .testimonials-logo {
       width: 96px;
       height: 32px;
-      background: #181611;
+      background: #f5c518;
       border-radius: 4px;
+      text-align: center;
+    }
+    .testimonials-logo img{
+      margin: 0 auto;
+      height: 80%;
+ 
     }
    /* ===============================
    CAROUSEL WRAPPER
@@ -243,7 +249,7 @@
 /* LEFT & RIGHT positioning */
 
 .testimonial-nav {
-  top: 36%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
@@ -436,13 +442,23 @@
     </div> -->
 
     <!-- Logos -->
-    <div class="testimonials-logos">
-      <div class="testimonials-logo"></div>
-      <div class="testimonials-logo"></div>
-      <div class="testimonials-logo"></div>
-      <div class="testimonials-logo"></div>
-      <div class="testimonials-logo"></div>
-    </div>
+    <!-- <div class="testimonials-logos">
+      <div class="testimonials-logo">
+        <img src="../assets/images/companies/HSBC481241.png" alt="Company Logo 1">
+      </div>
+      <div class="testimonials-logo">
+        <img src="../assets/images/icons/google.png" alt="">
+      </div>
+      <div class="testimonials-logo">
+        <img src="../assets/images/companies/ola-text.png" alt="" class="">
+      </div>
+      <div class="testimonials-logo">
+        <img src="../assets/images/companies/zomato-text.png" alt="">
+      </div>
+      <div class="testimonials-logo">
+        <img src="../assets/images/companies/Infosys481241.png" alt="">
+      </div>
+    </div> -->
 
   </div>
 </section>

@@ -7,7 +7,7 @@
   transform: translate3d(0,0,0);
 }
 
-.cohort-section { padding: 40px 0; }
+/*.cohort-section { padding: 40px 0; } */
 .cohort-container { max-width: 1200px; margin: auto; }
 
 /* ===============================
@@ -172,12 +172,8 @@
 .cohort-card-head {
   margin: -32px -32px 16px -32px;
   padding: 16px 28px;
-  background: linear-gradient(
-    to right,
-    rgba(59,29,18,.95),
-    rgba(59,29,18,.85)
-  );
-  color:#fff;
+  background:transparent;
+  color:#f5c518;
   font-size:17px;
   font-weight:700;
   border-bottom:1px solid rgba(255,255,255,.12);
@@ -328,7 +324,7 @@
         <div class="cohort-meta">
           <div class="cohort-meta-item">
             <div class="cohort-meta-icon"><i data-lucide="calendar"></i></div>
-            <div><small>Starts On</small><br><strong>Dec 15, 2025</strong></div>
+            <div><small>Starts On</small><br><strong>Mar 01, 2026</strong></div>
           </div>
           <div class="cohort-meta-item">
             <div class="cohort-meta-icon"><i data-lucide="timer"></i></div>
@@ -446,7 +442,7 @@
           </p>
           <div class="cohort-side-info">
             <div class="cohort-side-info-icon"><i data-lucide="calendar"></i></div>
-            30th November 2025, Sunday
+            15th February 2026, Sunday
           </div>
           <div class="cohort-side-info">
             <div class="cohort-side-info-icon"><i data-lucide="clock"></i></div>
@@ -463,7 +459,7 @@
           </p>
           <div class="cohort-side-info">
             <div class="cohort-side-info-icon"><i data-lucide="calendar"></i></div>
-            30th November 2025, Sunday
+            22nd February 2025, Sunday
           </div>
           <div class="cohort-side-info">
             <div class="cohort-side-info-icon"><i data-lucide="clock"></i></div>

@@ -27,9 +27,10 @@
     border-radius: 12px 12px 0 0;
 }
 
-.partner-bar p {
+.partner-bar-p {
     margin-bottom: 10px;
     font-weight: 600;
+    color: #fff !important;
 }
 
 .partners {
@@ -679,10 +680,11 @@ width: 100px;
 /* Section Heading */
 .section-headings {
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 500;
     color: #0f172a;
     text-align: left;
     margin: 0px !important;
+    text-transform: uppercase;
 }
 
 .section-head h2 span {
@@ -695,6 +697,8 @@ width: 100px;
     /* margin-top: 10px; */
     color: #6b7280;
     font-size: 16px;
+    font-style: italic;
+    
 }
 
 /* Layout Grid */
@@ -860,7 +864,7 @@ width: 100px;
   .cur-con-sticky {
   position: sticky;
   top: 120px;       /* 👈 offset below heading */
-  height: 80vh;
+  height: 90vh;
   display: flex;
     flex-direction: column;
   overflow: hidden;
@@ -1546,7 +1550,7 @@ padding-top: 20px;
    GRID
 ================================ */
 .launchpad-grid {
-  margin-top: 60px;
+ /* margin-top: 60px; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 32px;
@@ -1933,63 +1937,153 @@ padding-top: 20px;
 /* ================================================
         Laer and Build real-world projects start
 =====================================================*/
-        
-    /* ===== LAYOUT ===== */
-    .project-radar-section { 
-      display: grid; 
-      grid-template-columns: 1fr 1fr; 
-      height: 47vh; overflow: hidden; 
-      position: sticky; 
-      top: 0; }
-    /* VIEWPORT */
-  .project-content-scroll {
-    height: 47vh;
-    overflow: hidden;
-    position: relative;
+  .project-scroll-space {
+  height: calc(100vh * 5); /* number of steps */
+}
+      
+   .radar-svg {
+      filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.15));
     }
 
-  /* TRACK — THIS WAS MISSING */
-  .project-content-track {
-    height: 100%;
-    display: flex;
-    flex-direction: column;   /* 🔑 STACK VERTICALLY */
-    transition: transform 0.6s ease;
-    display: flex;
-  }
+    .radar-grid {
+      stroke: #e7e5e4;
+      fill: none;
+    }
 
-  /* EACH SLIDE */
-  .project-content-track section {
-    height: 100%;             /* EXACT FRAME */
-    flex-shrink: 0;           /* 🔑 prevent collapse */
-    display: flex;
-    align-items: center;
-    opacity: 0.3;
-    transition: opacity 0.4s ease;
-  }
+    .radar-axis {
+      stroke: #d6d3d1;
+    }
 
-  .project-content-track section.active {
-    opacity: 1;
-  }
+    .radar-data-polygon {
+      fill: rgba(245, 158, 11, 0.4);
+      stroke: #f59e0b;
+      stroke-width: 0.8;
+    }
+    .hexagon-rader-polygon{
+        fill: rgba(11, 122, 245, 0.25);
+        stroke: #0b7af5;
+        stroke-width: 0.8;
+    }
+
+    .triangle-1-data-polygon {
+      fill: rgba(11, 245, 81, 0.25);
+      stroke: #0bf517;
+      stroke-width: 0.8;
+    }
+
+    .triangle-2-data-polygon {
+      fill: rgba(245, 11, 11, 0.25);
+      stroke: #f50b0b;
+      stroke-width: 0.8;
+    }
+
+    .triangle-3-data-polygon {
+      fill: rgba(11, 66, 245, 0.25);
+      stroke: #0b42f5;
+      stroke-width: 0.8;
+    }
+
+     /* Points */
+    .radar-data-point {
+      fill: #f59e0b;
+      stroke: #ffffff;
+      stroke-width: 0.5;
+    }
+
+    .dark .radar-data-point {
+      stroke: #0c0a09;
+    }
+
+    /* Labels */
+    .radar-label {
+      font-size: 12px;
+      font-weight: 600;
+      fill: #1c1917;
+    }
+
+    .dark .radar-label {
+      fill: #fafaf9;
+    }
 
 
+    /* ===============================
+       MAIN LAYOUT
+    =============================== */
 
-    /* ===== RIGHT RADAR ===== */
+    .project-radar-section {
+     display: grid;
+      grid-template-columns: minmax(0, 1fr) 600px;
+      height: calc(100vh * 5); /* number of steps */
+      padding: 0vw;
+    }
+.project-left {
+  position: sticky;
+  height: 70vh;
+  top: 120px;
+}
+    /* LEFT CONTENT */
+.project-content-track {
+  position: sticky;
+  top: 0px;
+ height: calc(70vh - 140px);
+  
+  
+  align-items: center;
+}
+.project-content-track section {
+  position: absolute;     /* 🔥 KEY */
+  inset: 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  pointer-events: none;
+}
+
+.project-content-track section.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+    .project-card {
+      max-width: 520px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    ul {
+      margin-top: 16px;
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* RIGHT RADAR */
     .project-radar-sticky {
-      position: absolute;
-      right: -111px;
-      top: 0;
-      height: 54vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: sticky;
+      top: 120px;
+      height: 70vh;
+      
     }
 
-    /* ===== SVG ===== */
     .project-radar-sticky svg {
-      width: 570px;
-      height: 300px;
+      width: 520px;
+      height: auto;
+      overflow: visible;
     }
-
+    
     .project-frame {
       fill: none;
       stroke: #777;
@@ -2025,67 +2119,90 @@ padding-top: 20px;
     }
 
     .project-radar-panel {
-  display: flex;
-  align-items: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .project-radar-card {
+      /*background: #ffffff; */
+      color: #111;
+      border-radius: 18px;
+      padding: 30px 20px;
+      width: 100%;
+      max-width: 520px;
+    
+    }
+
+    /* Learner card layout */
+    .project-learner-card {
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Title */
+    .project-learner-title {
+      font-size: 27px;
+      font-weight: 500;
+      margin: 0px !important;
+      color: #111;
+    }
+
+    /* Main text */
+    .project-learner-text {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #444;
+      max-width: 420px;
+      margin: 0px !important;
+    }
+
+    /* Features */
+    .project-learner-features {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .project-feature {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 16px;
+      color: #222;
+    }
+
+    /* Icons */
+    .project-feature svg {
+      width: 20px;
+      height: 20px;
+      color: #e6003e;
+      /* professional blue */
+    }
+
+    /* ACTIVE RADAR SHAPE */
+    .radar-active {
+      opacity: 1;
+    }
+
+    .radar-inactive {
+      opacity: 0.15;
+    }
+    /* Radar label animation */
+.radar-label-group {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
 }
 
-.project-radar-card {
-  /*background: #ffffff; */
-  color: #111;
-  border-radius: 18px;
-  padding: 30px 20px;
-  width: 100%;
-  max-width: 520px;
-  /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15); */
+.radar-label-group.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
-/* Learner card layout */
-.project-learner-card {
-  max-width: 520px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Title */
-.project-learner-title {
-  font-size: 27px;
-  font-weight: 500;
-  margin: 0px !important;
-  color: #111;
-}
-
-/* Main text */
-.project-learner-text {
-  font-size: 17px;
-  line-height: 1.6;
-  color: #444;
-  max-width: 420px;
-  margin: 0px !important;
-}
-
-/* Features */
-.project-learner-features {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.project-feature {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-size: 16px;
-  color: #222;
-}
-
-/* Icons */
-.project-feature svg{
-  width: 20px;
-  height: 20px;
-  color: #e6003e; /* professional blue */
-}
-
 
 /* ================================================
-        Laer and Build real-world projects end
+        Laern and Build real-world projects end
 =====================================================*/

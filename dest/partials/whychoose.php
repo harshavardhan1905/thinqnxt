@@ -80,7 +80,7 @@
 }
 
 .why-choose-tag {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     letter-spacing: 0.2em;
     font-weight: 700;
     text-transform: uppercase;
@@ -142,7 +142,7 @@
 .why-choose-list li {
     display: flex;
     gap: 0.75rem;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     color: #475569;
     margin-bottom: 0.75rem;
 }
@@ -160,6 +160,7 @@
 /* Quote */
 .why-choose-quote {
     font-style: italic;
+    padding-top: 1rem;
     font-weight: 600;
     border-left: 3px solid #ffd700;
     padding-left: 0.75rem;
